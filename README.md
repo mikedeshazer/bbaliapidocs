@@ -10,9 +10,29 @@ Read the docs here:
 Original concept screenshots of the application to give context to how the API is being consumed:
 
 
+![Screenshot of Bbali](https://imgur.com/O1rWLI5)
+![Screenshot of Bbali](https://imgur.com/Z1NqTes)
+![Screenshot of Bbali](https://octodex.github.com/images/yaktocat.png)
+![Screenshot of Bbali](https://octodex.github.com/images/yaktocat.png)
+![Screenshot of Bbali](https://octodex.github.com/images/yaktocat.png)
+![Screenshot of Bbali](https://octodex.github.com/images/yaktocat.png)
+![Screenshot of Bbali](https://octodex.github.com/images/yaktocat.png)
+![Screenshot of Bbali](https://octodex.github.com/images/yaktocat.png)
+![Screenshot of Bbali](https://octodex.github.com/images/yaktocat.png)
+![Screenshot of Bbali](https://octodex.github.com/images/yaktocat.png)
+![Screenshot of Bbali](https://octodex.github.com/images/yaktocat.png)
+![Screenshot of Bbali](https://octodex.github.com/images/yaktocat.png)
+![Screenshot of Bbali](https://octodex.github.com/images/yaktocat.png)
+![Screenshot of Bbali](https://octodex.github.com/images/yaktocat.png)
+![Screenshot of Bbali](https://octodex.github.com/images/yaktocat.png)
+![Screenshot of Bbali](https://octodex.github.com/images/yaktocat.png)
+![Screenshot of Bbali](https://octodex.github.com/images/yaktocat.png)
+![Screenshot of Bbali](https://octodex.github.com/images/yaktocat.png)
+![Screenshot of Bbali](https://octodex.github.com/images/yaktocat.png)
 
-[alt welcome](https://imgur.com/O1rWLI5)
-[alt text](https://imgur.com/Z1NqTes)
+
+[alt welcome]()
+[alt text]()
 [alt text](https://imgur.com/GC04qlF)
 [alt text](https://imgur.com/ilIJZ9o)
 [alt text](https://imgur.com/aTsp1kB)
