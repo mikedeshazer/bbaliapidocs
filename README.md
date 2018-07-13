@@ -3,7 +3,7 @@
 ## Documentation for the Bbali API
 
 
-### Read the docs here: [https://mikedeshazer.github.io/bbaliapidocs/](https://mikedeshazer.github.io/bbaliapidocs/)
+### Read the docs here: [https://docs.bbali.io//](https://docs.bbali.io/)
 
 -----
 
