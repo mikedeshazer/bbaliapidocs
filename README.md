@@ -1,8 +1,9 @@
 # Bbali API
 
-## Documentation for the Bbali API Doc.
+## Documentation for the Bbali API
 
-Read the docs here: [https://mikedeshazer.github.io/bbaliapidocs/](https://mikedeshazer.github.io/bbaliapidocs/)
+
+### Read the docs here: [https://mikedeshazer.github.io/bbaliapidocs/](https://mikedeshazer.github.io/bbaliapidocs/)
 
 -----
 
