@@ -1,0 +1,2712 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Bbali API Reference</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo.png" class="logo" alt="Logo" />
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#vehicles" class="toc-h1 toc-link" data-title="Vehicles">Vehicles</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-nearby-vehicles" class="toc-h2 toc-link" data-title="Get Nearby Vehicles">Get Nearby Vehicles</a>
+                  </li>
+                  <li>
+                    <a href="#rent-vehicle" class="toc-h2 toc-link" data-title="Rent Vehicle">Rent Vehicle</a>
+                  </li>
+                  <li>
+                    <a href="#report-vehicle" class="toc-h2 toc-link" data-title="Report Vehicle">Report Vehicle</a>
+                  </li>
+                  <li>
+                    <a href="#checkout-of-vehicle" class="toc-h2 toc-link" data-title="Checkout of Vehicle">Checkout of Vehicle</a>
+                  </li>
+                  <li>
+                    <a href="#lock-vehicle" class="toc-h2 toc-link" data-title="Lock Vehicle">Lock Vehicle</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#users" class="toc-h1 toc-link" data-title="Users">Users</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#register-user" class="toc-h2 toc-link" data-title="Register User">Register User</a>
+                  </li>
+                  <li>
+                    <a href="#login-user" class="toc-h2 toc-link" data-title="Login User">Login User</a>
+                  </li>
+                  <li>
+                    <a href="#edit-user" class="toc-h2 toc-link" data-title="Edit User">Edit User</a>
+                  </li>
+                  <li>
+                    <a href="#deactivate-user-account" class="toc-h2 toc-link" data-title="Deactivate User Account">Deactivate User Account</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#rides" class="toc-h1 toc-link" data-title="Rides">Rides</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#start-ride" class="toc-h2 toc-link" data-title="Start Ride">Start Ride</a>
+                  </li>
+                  <li>
+                    <a href="#end-ride" class="toc-h2 toc-link" data-title="End Ride">End Ride</a>
+                  </li>
+                  <li>
+                    <a href="#get-rides-history" class="toc-h2 toc-link" data-title="Get Rides History">Get Rides History</a>
+                  </li>
+                  <li>
+                    <a href="#rate-ride" class="toc-h2 toc-link" data-title="Rate Ride">Rate Ride</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#notifications" class="toc-h1 toc-link" data-title="Notifications">Notifications</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#send-all-user-notification-within-geofence" class="toc-h2 toc-link" data-title="Send All User Notification Within GeoFence">Send All User Notification Within GeoFence</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#chargers" class="toc-h1 toc-link" data-title="Chargers">Chargers</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#apply-to-become-charger" class="toc-h2 toc-link" data-title="Apply To Become Charger">Apply To Become Charger</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#mechanics" class="toc-h1 toc-link" data-title="Mechanics">Mechanics</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#apply-to-become-mechanic" class="toc-h2 toc-link" data-title="Apply To Become Mechanic">Apply To Become Mechanic</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#delivery" class="toc-h1 toc-link" data-title="Delivery">Delivery</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#apply-to-become-delivery-person" class="toc-h2 toc-link" data-title="Apply To Become Delivery Person">Apply To Become Delivery Person</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#credits" class="toc-h1 toc-link" data-title="Credits">Credits</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#see-available-credits" class="toc-h2 toc-link" data-title="See available credits">See available credits</a>
+                  </li>
+                  <li>
+                    <a href="#http-request-22" class="toc-h2 toc-link" data-title="HTTP Request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#query-parameters-22" class="toc-h2 toc-link" data-title="Query Parameters">Query Parameters</a>
+                  </li>
+                  <li>
+                    <a href="#sendcredits" class="toc-h2 toc-link" data-title="SendCredits">SendCredits</a>
+                  </li>
+                  <li>
+                    <a href="#http-request-23" class="toc-h2 toc-link" data-title="HTTP Request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#query-parameters-23" class="toc-h2 toc-link" data-title="Query Parameters">Query Parameters</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#referral-codes" class="toc-h1 toc-link" data-title="Referral Codes">Referral Codes</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create-referral-code" class="toc-h2 toc-link" data-title="Create Referral Code">Create Referral Code</a>
+                  </li>
+                  <li>
+                    <a href="#http-request-24" class="toc-h2 toc-link" data-title="HTTP Request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#query-parameters-24" class="toc-h2 toc-link" data-title="Query Parameters">Query Parameters</a>
+                  </li>
+                  <li>
+                    <a href="#use-promo-code" class="toc-h2 toc-link" data-title="Use Promo Code">Use Promo Code</a>
+                  </li>
+                  <li>
+                    <a href="#http-request-25" class="toc-h2 toc-link" data-title="HTTP Request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#query-parameters-25" class="toc-h2 toc-link" data-title="Query Parameters">Query Parameters</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#payments" class="toc-h1 toc-link" data-title="Payments">Payments</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#add-payment-method" class="toc-h2 toc-link" data-title="Add Payment Method">Add Payment Method</a>
+                  </li>
+                  <li>
+                    <a href="#http-request-26" class="toc-h2 toc-link" data-title="HTTP Request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#query-parameters-26" class="toc-h2 toc-link" data-title="Query Parameters">Query Parameters</a>
+                  </li>
+                  <li>
+                    <a href="#update-payment-method" class="toc-h2 toc-link" data-title="Update Payment Method">Update Payment Method</a>
+                  </li>
+                  <li>
+                    <a href="#http-request-27" class="toc-h2 toc-link" data-title="HTTP Request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#query-parameters-27" class="toc-h2 toc-link" data-title="Query Parameters">Query Parameters</a>
+                  </li>
+                  <li>
+                    <a href="#authorize-payment-method" class="toc-h2 toc-link" data-title="Authorize Payment Method">Authorize Payment Method</a>
+                  </li>
+                  <li>
+                    <a href="#http-request-28" class="toc-h2 toc-link" data-title="HTTP Request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#query-parameters-28" class="toc-h2 toc-link" data-title="Query Parameters">Query Parameters</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#admin" class="toc-h1 toc-link" data-title="Admin">Admin</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#make-admin" class="toc-h2 toc-link" data-title="Make Admin">Make Admin</a>
+                  </li>
+                  <li>
+                    <a href="#http-request-29" class="toc-h2 toc-link" data-title="HTTP Request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#query-parameters-29" class="toc-h2 toc-link" data-title="Query Parameters">Query Parameters</a>
+                  </li>
+                  <li>
+                    <a href="#send-credit" class="toc-h2 toc-link" data-title="Send Credit">Send Credit</a>
+                  </li>
+                  <li>
+                    <a href="#http-request-30" class="toc-h2 toc-link" data-title="HTTP Request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#query-parameters-30" class="toc-h2 toc-link" data-title="Query Parameters">Query Parameters</a>
+                  </li>
+                  <li>
+                    <a href="#search-nearby-users" class="toc-h2 toc-link" data-title="Search nearby users">Search nearby users</a>
+                  </li>
+                  <li>
+                    <a href="#http-request-31" class="toc-h2 toc-link" data-title="HTTP Request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#query-parameters-31" class="toc-h2 toc-link" data-title="Query Parameters">Query Parameters</a>
+                  </li>
+                  <li>
+                    <a href="#update-user" class="toc-h2 toc-link" data-title="Update User">Update User</a>
+                  </li>
+                  <li>
+                    <a href="#http-request-32" class="toc-h2 toc-link" data-title="HTTP Request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#query-parameters-32" class="toc-h2 toc-link" data-title="Query Parameters">Query Parameters</a>
+                  </li>
+                  <li>
+                    <a href="#create-vehicle" class="toc-h2 toc-link" data-title="Create Vehicle">Create Vehicle</a>
+                  </li>
+                  <li>
+                    <a href="#http-request-33" class="toc-h2 toc-link" data-title="HTTP Request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#query-parameters-33" class="toc-h2 toc-link" data-title="Query Parameters">Query Parameters</a>
+                  </li>
+                  <li>
+                    <a href="#update-vehicle" class="toc-h2 toc-link" data-title="Update Vehicle">Update Vehicle</a>
+                  </li>
+                  <li>
+                    <a href="#http-request-34" class="toc-h2 toc-link" data-title="HTTP Request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#query-parameters-34" class="toc-h2 toc-link" data-title="Query Parameters">Query Parameters</a>
+                  </li>
+                  <li>
+                    <a href="#view-special-user-applications" class="toc-h2 toc-link" data-title="View Special User Applications">View Special User Applications</a>
+                  </li>
+                  <li>
+                    <a href="#http-request-35" class="toc-h2 toc-link" data-title="HTTP Request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#query-parameters-35" class="toc-h2 toc-link" data-title="Query Parameters">Query Parameters</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li><a href='https://wwww.bbali.io'>Documentation by bbali</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<p>Welcome to the Bbali API! This documentation powers the Bbali mobile application for shared scooter rentals. Users can find scooters nearb them, rent them on-demand, and then drop them off wherever they like. Users can signup as chargers and receive scooters at their location for charging at a fee. Some users can sign up as delivery people and deliver scooters to people who want to use the &quot;devliver to me&quot; option.
+Admins of the application can send free credits to users, and toggle features such as the ability for users to send share codes to friends to get free rides (as well as adjust how much they want to send in free rides). Admins can also make other users admins, block users, check users ride status/history, and edit credits. </p>
+
+<p>This API will be written in Node.js with Mongo database.</p>
+<h1 id='vehicles'>Vehicles</h1><h2 id='get-nearby-vehicles'>Get Nearby Vehicles</h2>
+<p>This endpoint retrieves all vehicles nearby.</p>
+
+<blockquote>
+<p>This API call returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2 vehicles nearby"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="w">
+    </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"463D3"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"adult-scooter"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"charge"</span><span class="p">:</span><span class="w"> </span><span class="err">.</span><span class="mi">5</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"available"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"463D3"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"adult-scooter"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"charge"</span><span class="p">:</span><span class="w"> </span><span class="err">.</span><span class="mi">6</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"being-repaired"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request'>HTTP Request</h3>
+<p><code>GET http://api.bbali.com/vehicles/nearby</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>lon</td>
+<td>required</td>
+<td>Longitude of user</td>
+</tr>
+<tr>
+<td>lat</td>
+<td>required</td>
+<td>latitude of user</td>
+</tr>
+<tr>
+<td>range</td>
+<td>optional</td>
+<td>Set to 5 by default (5 kilometers)</td>
+</tr>
+</tbody></table>
+<h2 id='rent-vehicle'>Rent Vehicle</h2>
+<p>This endpoint allows a user to rent a vehicle</p>
+
+<blockquote>
+<p>This API call returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vehicle 57635JS rented"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
+
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"463D3"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"adult-scooter"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"charge"</span><span class="p">:</span><span class="w"> </span><span class="err">.</span><span class="mi">5</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"available"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST http://api.bbali.com/vehicles/rent</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userAuth</td>
+<td>required</td>
+<td>User authenication token</td>
+</tr>
+<tr>
+<td>paymentMethod</td>
+<td>required</td>
+<td>ID of users payment method</td>
+</tr>
+<tr>
+<td>vehicleName</td>
+<td>required</td>
+<td>Unique Identifier name of the vehicle</td>
+</tr>
+<tr>
+<td>pickupLat</td>
+<td>optional</td>
+<td>Latitude of user at pickup location</td>
+</tr>
+<tr>
+<td>pickupLon</td>
+<td>optional</td>
+<td>Longitude of user at pickup location</td>
+</tr>
+<tr>
+<td>deductCredits</td>
+<td>optional</td>
+<td>Set by user, defaults to true, and if true the rental credits will be used towards this ride</td>
+</tr>
+<tr>
+<td>type</td>
+<td>required</td>
+<td>minutely-on-demand, hourly, daily, weekly, monthy</td>
+</tr>
+<tr>
+<td>duration</td>
+<td>optional</td>
+<td>if not minutely-on-demand, user sets the amount of time they are booking rental for</td>
+</tr>
+<tr>
+<td>fromShop</td>
+<td>required</td>
+<td>if true then they are renting from a shop and must return to the shop</td>
+</tr>
+</tbody></table>
+<h2 id='report-vehicle'>Report Vehicle</h2>
+<p>This endpoint allows a user send information about an issue with a vehicle, such as no battery charge, not running, scratches, or other infomration</p>
+
+<blockquote>
+<p>This API call returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vehicle report posted"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
+
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"users message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"x is the problem or whatever user sent"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"vehicleId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"463D3"</span><span class="p">,</span><span class="w">
+
+      </span><span class="p">}</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-3'>HTTP Request</h3>
+<p><code>POST http://api.bbali.com/vehicles/report</code></p>
+<h3 id='query-parameters-3'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userAuth</td>
+<td>required</td>
+<td>User authenication token</td>
+</tr>
+<tr>
+<td>userEmail</td>
+<td>required</td>
+<td>email of user</td>
+</tr>
+<tr>
+<td>msg</td>
+<td>required</td>
+<td>message from user describing problem</td>
+</tr>
+<tr>
+<td>type</td>
+<td>optional</td>
+<td>damage, emptybattery, doesntcharge, lost, stolen, cantcheckin, cantcheckout, gotinaccident, confiscatedbyauthorities</td>
+</tr>
+<tr>
+<td>userLat</td>
+<td>optional</td>
+<td>Latitude of user at pickup location</td>
+</tr>
+<tr>
+<td>usersLon</td>
+<td>optional</td>
+<td>Longitude of the user whre they sent the message</td>
+</tr>
+<tr>
+<td>vehicleName</td>
+<td>optional</td>
+<td>Unique identifier of the vehicle being written about</td>
+</tr>
+</tbody></table>
+<h2 id='checkout-of-vehicle'>Checkout of Vehicle</h2>
+<p>This endpoint allows a a user to complete their ride by that vehicles unique name, locking it</p>
+
+<blockquote>
+<p>This API call returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vehicle successfully checked out. Ride completed"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
+
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"totalCharge"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5500"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"KRW"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"estimatedBatteryLife"</span><span class="p">:</span><span class="err">.</span><span class="mi">56</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"methodUsedType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ether"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"paymentIdentifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xxxx hf749"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"duration"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.2 hours"</span><span class="w">
+
+      </span><span class="p">}</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-4'>HTTP Request</h3>
+<p><code>POST http://api.bbali.com/vehicles/checkout</code></p>
+<h3 id='query-parameters-4'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userAuth</td>
+<td>required</td>
+<td>User authenication token</td>
+</tr>
+<tr>
+<td>vehicleName</td>
+<td>required</td>
+<td>unique identifier of vehicle</td>
+</tr>
+<tr>
+<td>userLat</td>
+<td>required</td>
+<td>lat of user finishing their ride</td>
+</tr>
+<tr>
+<td>userLon</td>
+<td>required</td>
+<td>long of user finishing their ride</td>
+</tr>
+<tr>
+<td>userLat</td>
+<td>optional</td>
+<td>Latitude of user at pickup location</td>
+</tr>
+</tbody></table>
+<h2 id='lock-vehicle'>Lock Vehicle</h2>
+<p>This endpoint allows a a user to lock the vehicle and the vehicle is still not rentable by other users. Status is changed to locked, but no available as it is when there is a checkout</p>
+
+<blockquote>
+<p>This API call returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vehicle successfully locked"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
+
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"currentCharge"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5500"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"currency"</span><span class="p">:</span><span class="w"> </span><span class="s2">"KRW"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"estimatedBatteryLife"</span><span class="p">:</span><span class="err">.</span><span class="mi">56</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"duration"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.2 hours"</span><span class="w">
+
+      </span><span class="p">}</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-5'>HTTP Request</h3>
+<p><code>POST http://api.bbali.com/vehicles/lock</code></p>
+<h3 id='query-parameters-5'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userAuth</td>
+<td>required</td>
+<td>User authenication token</td>
+</tr>
+<tr>
+<td>vehicleName</td>
+<td>required</td>
+<td>unique identifier of vehicle</td>
+</tr>
+<tr>
+<td>userLat</td>
+<td>required</td>
+<td>lat of user finishing their ride</td>
+</tr>
+<tr>
+<td>userLon</td>
+<td>required</td>
+<td>long of user locking their vehicle</td>
+</tr>
+<tr>
+<td>userLat</td>
+<td>optional</td>
+<td>Latitude of user at pickup vehicle</td>
+</tr>
+</tbody></table>
+<h1 id='users'>Users</h1><h2 id='register-user'>Register User</h2>
+<p>This endpoint creates a user and returns their unique identifier for future calls authenticating user. Users can load funds optionally through bitcoin or Ether, and if they become a charger, delivery person or mechanic and this is where they will recieve crypto</p>
+
+<blockquote>
+<p>This API call returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user account successfully created"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
+
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"userEmail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mike@bbali.io"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"userPhone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+82 10278532534"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"userAuth"</span><span class="p">:</span><span class="s2">"HDKJHD32328HDHD455DS"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"bitcoinAddress"</span><span class="p">:</span><span class="s2">"HZTpqdYkRDahk95ZqBjUR82kBdFVPET3n"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"etherAddress"</span><span class="p">:</span><span class="s2">"0xed7dBeb7998Ec79D99379dA81c4b54f74abc69d4"</span><span class="w">
+
+
+      </span><span class="p">}</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-6'>HTTP Request</h3>
+<p><code>POST http://api.bbali.com/users/create</code></p>
+<h3 id='query-parameters-6'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>email</td>
+<td>optional (if phone is register)</td>
+<td>User email</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>optional (if email)</td>
+<td>User phone (includes + area code then space and then phone number eg +82 1027853254)</td>
+</tr>
+<tr>
+<td>fullName</td>
+<td>required</td>
+<td>first and last name of user</td>
+</tr>
+<tr>
+<td>password</td>
+<td>required</td>
+<td>user password</td>
+</tr>
+<tr>
+<td>userLat</td>
+<td>optional</td>
+<td>Latitude of user signing up</td>
+</tr>
+<tr>
+<td>userLon</td>
+<td>optional</td>
+<td>Longitude of user signing up</td>
+</tr>
+<tr>
+<td>selectedLanguage</td>
+<td>optional</td>
+<td>Defaults to English</td>
+</tr>
+</tbody></table>
+<h2 id='login-user'>Login User</h2>
+<p>This endpoint logs in a user</p>
+
+<blockquote>
+<p>This API call returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user account successfully created"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
+
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"currentStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"riding"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"notsuspended"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"userAuth"</span><span class="p">:</span><span class="s2">"HDKJHD32328HDHD455DS"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"language"</span><span class="p">:</span><span class="s2">"English"</span><span class="w">
+
+
+      </span><span class="p">}</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-7'>HTTP Request</h3>
+<p><code>POST http://api.bbali.com/users/session</code></p>
+<h3 id='query-parameters-7'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>email</td>
+<td>optional</td>
+<td>User email</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>optional (if email, user only has email registered)</td>
+<td>User phone (includes + area code then space and then phone number eg +82 1027853254)</td>
+</tr>
+<tr>
+<td>password</td>
+<td>required</td>
+<td>user password</td>
+</tr>
+<tr>
+<td>userLat</td>
+<td>optional</td>
+<td>Latitude of user logging in</td>
+</tr>
+<tr>
+<td>userLon</td>
+<td>optional</td>
+<td>Longitude of user logging in</td>
+</tr>
+</tbody></table>
+<h2 id='edit-user'>Edit User</h2>
+<p>This endpoint allows user to edit their information in the settings screen</p>
+
+<blockquote>
+<p>This API call returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user account successfully updated"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
+
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mike@bbali.io"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"passwordHash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"27732JHDJHA23272372232322dsadsd2d"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"phone"</span><span class="p">:</span><span class="s2">"+82 1027853256"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"language"</span><span class="p">:</span><span class="s2">"English"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"allOtherPrefs"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+
+
+      </span><span class="p">}</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-8'>HTTP Request</h3>
+<p><code>PUT http://api.bbali.com/users/edit</code></p>
+<h3 id='query-parameters-8'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userAuth</td>
+<td>required</td>
+<td>user&#39;s authentication token in otder to make change</td>
+</tr>
+<tr>
+<td>email</td>
+<td>optional</td>
+<td>User email</td>
+</tr>
+<tr>
+<td>name</td>
+<td>optional</td>
+<td>User name if not blank</td>
+</tr>
+<tr>
+<td>language</td>
+<td>optional</td>
+<td>If user wants to change language</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>optional</td>
+<td>User phone update if not blank</td>
+</tr>
+<tr>
+<td>password</td>
+<td>optional</td>
+<td>user password if not blank</td>
+</tr>
+<tr>
+<td>userLat</td>
+<td>optional</td>
+<td>Latitude of user editting</td>
+</tr>
+<tr>
+<td>userLon</td>
+<td>optional</td>
+<td>Longitude of user editting</td>
+</tr>
+<tr>
+<td>isCharger</td>
+<td>optional</td>
+<td>toggles off charger or on user as charger if they were approved</td>
+</tr>
+<tr>
+<td>isMechanic</td>
+<td>optional</td>
+<td>toggles of mechanic mode or on user as mechanic if they were approved</td>
+</tr>
+<tr>
+<td>isDelivery</td>
+<td>optional</td>
+<td>toggles of &quot;I&#39;m a delivery person&quot; or on user as delivery person if they were approved</td>
+</tr>
+</tbody></table>
+<h2 id='deactivate-user-account'>Deactivate User Account</h2>
+<p>This endpoint allows user to deactivate account. They can still login and change this later. If they are a charger, mechanic, or delivery person then they can&#39;t be reached about events associated with those special accounts</p>
+
+<blockquote>
+<p>This API call returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user account successfully deactivated"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
+
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"userAuth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sjhfsdhjsd3443"</span><span class="p">,</span><span class="w">
+
+
+
+      </span><span class="p">}</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-9'>HTTP Request</h3>
+<p><code>POST http://api.bbali.com/users/deactivate</code></p>
+<h3 id='query-parameters-9'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userAuth</td>
+<td>required</td>
+<td>user&#39;s authentication token in otder to make change</td>
+</tr>
+</tbody></table>
+<h1 id='rides'>Rides</h1><h2 id='start-ride'>Start Ride</h2>
+<p>After a vehicle is rented, immediately a create ride is called</p>
+
+<blockquote>
+<p>This API call returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ride successfuly started"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
+
+     </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"rideId"</span><span class="p">:</span><span class="s2">"34778438743"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"timstamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-12 07:15:20 GMT"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"vehicleName"</span><span class="p">:</span><span class="s2">"55423JU"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-10'>HTTP Request</h3>
+<p><code>POST http://api.bbali.com/rides/start</code></p>
+<h3 id='query-parameters-10'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userAuth</td>
+<td>required</td>
+<td>user&#39;s authentication token</td>
+</tr>
+<tr>
+<td>vehicleName</td>
+<td>required</td>
+<td>unique identifier of the vehicle being rented,</td>
+</tr>
+<tr>
+<td>userLat</td>
+<td>optional</td>
+<td>Latitude of user creating ride</td>
+</tr>
+<tr>
+<td>userLon</td>
+<td>optional</td>
+<td>Longitude of user creating ride</td>
+</tr>
+</tbody></table>
+<h2 id='end-ride'>End Ride</h2>
+<p>After a vehicle is checkedout, immediately a end ride is called, as a double confirm, because the checkout vehicle endpoint should do mostly what this does to the database</p>
+
+<blockquote>
+<p>This API call returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ride successfuly ended"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
+
+     </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"rideId"</span><span class="p">:</span><span class="s2">"34778438743"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-11'>HTTP Request</h3>
+<p><code>POST http://api.bbali.com/rides/end</code></p>
+<h3 id='query-parameters-11'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userAuth</td>
+<td>required</td>
+<td>user&#39;s authentication token</td>
+</tr>
+<tr>
+<td>vehicleName</td>
+<td>required</td>
+<td>unique identifier of the vehicle being checked out,</td>
+</tr>
+<tr>
+<td>userLat</td>
+<td>optional</td>
+<td>Latitude of user creating ride</td>
+</tr>
+<tr>
+<td>userLon</td>
+<td>optional</td>
+<td>Longitude of user creating ride</td>
+</tr>
+</tbody></table>
+<h2 id='get-rides-history'>Get Rides History</h2>
+<p>This endpoint allows user to view</p>
+
+<blockquote>
+<p>This API call returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"85 rides in your history"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
+
+      </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"rideId"</span><span class="p">:</span><span class="mi">2818128</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"duration"</span><span class="p">:</span><span class="s2">"5.4 hours"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"paymentMethod"</span><span class="p">:</span><span class="s2">"Android Pay"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"paymentIdentifier"</span><span class="p">:</span><span class="s2">"3473474dfsdf3443"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"costOfRide"</span><span class="p">:</span><span class="mi">25500</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"currency"</span><span class="p">:</span><span class="s2">"KRW"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"paymentStatus"</span><span class="p">:</span><span class="s2">"pending"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"vehicleName"</span><span class="p">:</span><span class="s2">"KDG37D"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"vehicleType"</span><span class="p">:</span><span class="s2">"adultscooter"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"timstamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-02-12 05:15:20 GMT"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"in transit"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"dropOfAddress"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"pickupLat"</span><span class="p">:</span><span class="mf">37.2233232</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"pickupLon"</span><span class="p">:</span><span class="mf">102.3223322</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"dropOffLat"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"dropoffLon"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="w">
+
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"rideId"</span><span class="p">:</span><span class="mi">3818125</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"duration"</span><span class="p">:</span><span class="s2">"5.4 hours"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"paymentMethod"</span><span class="p">:</span><span class="s2">"Android Pay"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"paymentIdentifier"</span><span class="p">:</span><span class="s2">"5473474dfsdf3443"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"costOfRide"</span><span class="p">:</span><span class="mi">25500</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"currency"</span><span class="p">:</span><span class="s2">"KRW"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"paymentStatus"</span><span class="p">:</span><span class="s2">"completed (approved)"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"vehicleName"</span><span class="p">:</span><span class="s2">"7DG374"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"vehicleType"</span><span class="p">:</span><span class="s2">"adultscooter"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"timstamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-12 07:15:20 GMT"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"complete"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"dropOfAddress"</span><span class="p">:</span><span class="s2">"74 Samobon-ro Seoul, KR"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"pickupLat"</span><span class="p">:</span><span class="mf">37.2233232</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"pickupLon"</span><span class="p">:</span><span class="mf">102.3223322</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"dropOffLat"</span><span class="p">:</span><span class="mf">37.2233232</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"dropoffLon"</span><span class="p">:</span><span class="mf">102.3223322</span><span class="p">,</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+
+      </span><span class="p">]</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-12'>HTTP Request</h3>
+<p><code>GET http://api.bbali.com/rides/</code></p>
+<h3 id='query-parameters-12'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userAuth</td>
+<td>required</td>
+<td>user&#39;s authentication token to get their ride history</td>
+</tr>
+</tbody></table>
+<h2 id='rate-ride'>Rate Ride</h2>
+<p>This endpoint allows user to view</p>
+
+<blockquote>
+<p>This API call returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ride successfuly reviewed"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
+
+     </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"rating"</span><span class="p">:</span><span class="mf">4.3</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"review"</span><span class="p">:</span><span class="s2">"I liked my ride"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"reviewId"</span><span class="p">:</span><span class="mi">236237</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"timstamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-12 07:15:20 GMT"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-13'>HTTP Request</h3>
+<p><code>POST http://api.bbali.com/rides/review</code></p>
+<h3 id='query-parameters-13'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userAuth</td>
+<td>required</td>
+<td>user&#39;s authentication token</td>
+</tr>
+<tr>
+<td>rideId</td>
+<td>required</td>
+<td>ID of ride</td>
+</tr>
+<tr>
+<td>vehicleName</td>
+<td>required</td>
+<td>unique identifier of the vehicle being rated,</td>
+</tr>
+<tr>
+<td>starRating</td>
+<td>optional</td>
+<td>1-5 float rating</td>
+</tr>
+<tr>
+<td>textRating</td>
+<td>optional</td>
+<td>text about the ride or story about ride</td>
+</tr>
+<tr>
+<td>userLat</td>
+<td>optional</td>
+<td>Latitude of user leaving review</td>
+</tr>
+<tr>
+<td>userLon</td>
+<td>optional</td>
+<td>Longitude of user leaving review</td>
+</tr>
+</tbody></table>
+<h1 id='notifications'>Notifications</h1><h2 id='send-all-user-notification-within-geofence'>Send All User Notification Within GeoFence</h2>
+<p>Only can be created by development/operations team and not admins, either automated or manual, for both Apple and Android</p>
+
+<blockquote>
+<p>This API call returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Notification Sent"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
+
+     </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"notifcationId"</span><span class="p">:</span><span class="s2">"34778438743"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"timstamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-12 07:15:20 GMT"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"numberOfUsersReached"</span><span class="p">:</span><span class="mi">8374</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-14'>HTTP Request</h3>
+<p><code>POST http://api.bbali.com/notification/send</code></p>
+<h3 id='query-parameters-14'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>notificationAuth</td>
+<td>required</td>
+<td>special, secret auth code for sending these kinds of notifications</td>
+</tr>
+<tr>
+<td>msg</td>
+<td>required</td>
+<td>message that&#39;s going to users</td>
+</tr>
+<tr>
+<td>title</td>
+<td>required</td>
+<td>title of message that&#39;s going to users</td>
+</tr>
+<tr>
+<td>centerLat</td>
+<td>required</td>
+<td>latitude center point of the notification geofence</td>
+</tr>
+<tr>
+<td>centerlongitude</td>
+<td>required</td>
+<td>longitude center point of the notification geofence</td>
+</tr>
+<tr>
+<td>radius</td>
+<td>optional</td>
+<td>defaults to global or 20,000 kilometers</td>
+</tr>
+<tr>
+<td>type</td>
+<td>optional</td>
+<td>defaults to all user types, but can be set to be only users that are &quot;mechanic&quot;, &quot;admin&quot;, &quot;riders&quot; (all users), &quot;currentRiders&quot; (people on a trip at the moment), &quot;charger&quot; etc</td>
+</tr>
+<tr>
+<td>emailAsWell</td>
+<td>optional</td>
+<td>set by default to false but if true also send the message as an email</td>
+</tr>
+<tr>
+<td>androidAuthCredentials</td>
+<td>required</td>
+<td>Android credentials tied to app in order to send notification</td>
+</tr>
+<tr>
+<td>appleAuthCredntials</td>
+<td>required</td>
+<td>Apple credentials tied to app in order to send notification</td>
+</tr>
+</tbody></table>
+<h1 id='chargers'>Chargers</h1><h2 id='apply-to-become-charger'>Apply To Become Charger</h2>
+<p>API call allows a user to apply to become a charger at their location. </p>
+
+<blockquote>
+<p>This API call returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Application Sent"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
+
+     </span><span class="p">{</span><span class="w">
+
+      </span><span class="s2">"timstamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-12 07:15:20 GMT"</span><span class="p">,</span><span class="w">
+
+    </span><span class="p">}</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-15'>HTTP Request</h3>
+<p><code>POST http://api.bbali.com/chargers/apply</code></p>
+<h3 id='query-parameters-15'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userAuth</td>
+<td>required</td>
+<td>users Authentication token</td>
+</tr>
+<tr>
+<td>email</td>
+<td>required</td>
+<td>user&#39;s email</td>
+</tr>
+<tr>
+<td>userLat</td>
+<td>required</td>
+<td>location of user&#39;s charger location</td>
+</tr>
+<tr>
+<td>userLon</td>
+<td>required</td>
+<td>longitude location of user&#39;s charger location</td>
+</tr>
+<tr>
+<td>address</td>
+<td>required</td>
+<td>longitude location of user&#39;s charger location</td>
+</tr>
+<tr>
+<td>description</td>
+<td>optional</td>
+<td>description of the charging facility</td>
+</tr>
+</tbody></table>
+<h3 id='change-charge-status'>Change Charge Status</h3>
+<p>If user is approved by admin as a charger, then they can set their status to on or off (meaning they are available at the moment or not available regarding accepting vehicles to charge)</p>
+
+<blockquote>
+<p>This API call returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Status updated"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
+
+     </span><span class="p">{</span><span class="w">
+
+      </span><span class="s2">"timstamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-12 07:15:20 GMT"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"available"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"numberVehiclesCurrentlyCharging"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"capacityLeft"</span><span class="p">:</span><span class="mi">3</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-16'>HTTP Request</h3>
+<p><code>PUT http://api.bbali.com/chargers/status</code></p>
+<h3 id='query-parameters-16'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userAuth</td>
+<td>required</td>
+<td>users Authentication token</td>
+</tr>
+<tr>
+<td>status</td>
+<td>required</td>
+<td>available, unavailable, permanently closed, full, notfullanymore</td>
+</tr>
+<tr>
+<td>capacity</td>
+<td>optional</td>
+<td>if not blank then the change in capcity for how may they can charge at one time at the current location</td>
+</tr>
+<tr>
+<td>vehicleName</td>
+<td>optional</td>
+<td>if they are updating status with a particular vehicle they are charging</td>
+</tr>
+<tr>
+<td>newLat</td>
+<td>optional</td>
+<td>if the charger address changes</td>
+</tr>
+<tr>
+<td>newLon</td>
+<td>optional</td>
+<td>if charger address changes</td>
+</tr>
+<tr>
+<td>newaddress</td>
+<td>optional</td>
+<td>if charger address changes</td>
+</tr>
+<tr>
+<td>newdescription</td>
+<td>optional</td>
+<td>description of the charging facility if the facility has changed or location has changed</td>
+</tr>
+</tbody></table>
+<h1 id='mechanics'>Mechanics</h1><h2 id='apply-to-become-mechanic'>Apply To Become Mechanic</h2>
+<p>API call allows a user to apply to become a charger at their location. Users dont have static locations but when broken vehicles are near them a notification might be sent with opportunity to fix a vehicle if user reports a vehicle as broken or in accident</p>
+
+<blockquote>
+<p>This API call returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Application Sent"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
+
+     </span><span class="p">{</span><span class="w">
+
+      </span><span class="s2">"timstamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-12 07:15:20 GMT"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-17'>HTTP Request</h3>
+<p><code>POST http://api.bbali.com/chargers/apply</code></p>
+<h3 id='query-parameters-17'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userAuth</td>
+<td>required</td>
+<td>users Authentication token</td>
+</tr>
+<tr>
+<td>email</td>
+<td>required</td>
+<td>user&#39;s email</td>
+</tr>
+<tr>
+<td>userLat</td>
+<td>required</td>
+<td>location of user</td>
+</tr>
+<tr>
+<td>userLon</td>
+<td>required</td>
+<td>longitude location of user</td>
+</tr>
+<tr>
+<td>address</td>
+<td>required</td>
+<td>longitude location of user</td>
+</tr>
+<tr>
+<td>description</td>
+<td>optional</td>
+<td>description of the users capabilities</td>
+</tr>
+</tbody></table>
+<h3 id='change-mechanic-status'>Change Mechanic Status</h3>
+<p>If user is approved by admin as a charger, then they can set their status to on or off (meaning they are available at the moment or not available regarding accepting vehicles to charge)</p>
+
+<blockquote>
+<p>This API call returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Status updated"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
+
+     </span><span class="p">{</span><span class="w">
+
+      </span><span class="s2">"timstamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-12 07:15:20 GMT"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"available"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"numberVehiclesCurrentlyCharging"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"capacityLeft"</span><span class="p">:</span><span class="mi">3</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-18'>HTTP Request</h3>
+<p><code>PUT http://api.bbali.com/chargers/status</code></p>
+<h3 id='query-parameters-18'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userAuth</td>
+<td>required</td>
+<td>users Authentication token</td>
+</tr>
+<tr>
+<td>status</td>
+<td>required</td>
+<td>available, unavailable, permanently quiting, oncall, workingOnVehicle</td>
+</tr>
+<tr>
+<td>vehicleName</td>
+<td>optional</td>
+<td>if they picking up a particular vehicle to fix</td>
+</tr>
+<tr>
+<td>lat</td>
+<td>optional</td>
+<td>user&#39;s lat during update</td>
+</tr>
+<tr>
+<td>lon</td>
+<td>optional</td>
+<td>user&#39;s lon during update</td>
+</tr>
+</tbody></table>
+<h1 id='delivery'>Delivery</h1>
+<p>When someone create a ride, they can request &quot;deliver to me&quot; as an option. Notifications go out to these delivery people within a 10 kilimoter radius, who can then use the app to find a vehicle, unlock it without charge, and take it to a user&#39;s location. These endpoints define how that should be handled.</p>
+<h2 id='apply-to-become-delivery-person'>Apply To Become Delivery Person</h2>
+<p>API call allows a user to apply to become a delivery person for review by admins</p>
+
+<blockquote>
+<p>This API call returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Application Sent"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
+
+     </span><span class="p">{</span><span class="w">
+
+      </span><span class="s2">"timstamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-12 07:15:20 GMT"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-19'>HTTP Request</h3>
+<p><code>POST http://api.bbali.com/delivery/apply</code></p>
+<h3 id='query-parameters-19'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userAuth</td>
+<td>required</td>
+<td>users Authentication token</td>
+</tr>
+<tr>
+<td>email</td>
+<td>required</td>
+<td>user&#39;s email</td>
+</tr>
+<tr>
+<td>userLat</td>
+<td>required</td>
+<td>location of user</td>
+</tr>
+<tr>
+<td>userLon</td>
+<td>required</td>
+<td>longitude location of user</td>
+</tr>
+<tr>
+<td>address</td>
+<td>required</td>
+<td>longitude location of user</td>
+</tr>
+<tr>
+<td>description</td>
+<td>optional</td>
+<td>description of the users availability</td>
+</tr>
+</tbody></table>
+<h3 id='change-delivery-person-status'>Change Delivery Person Status</h3>
+<p>If user is approved by admin as a delivery person, then they can set their status to on or off (meaning they are available at the moment or not available regarding picking up and delivering vehicles to users). This endpoint is also used if they accept a request to pickup for somone</p>
+
+<blockquote>
+<p>This API call returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Status updated"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
+
+     </span><span class="p">{</span><span class="w">
+
+      </span><span class="s2">"timstamp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-12 07:15:20 GMT"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"available"</span><span class="p">,</span><span class="w">
+
+    </span><span class="p">}</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-20'>HTTP Request</h3>
+<p><code>PUT http://api.bbali.com/delivery/status</code></p>
+<h3 id='query-parameters-20'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userAuth</td>
+<td>required</td>
+<td>users Authentication token</td>
+</tr>
+<tr>
+<td>status</td>
+<td>required</td>
+<td>available, unavailable, permanently quiting, headingToVehicle, deliveringVehicle</td>
+</tr>
+<tr>
+<td>vehicleName</td>
+<td>optional</td>
+<td>if they picking up a particular vehicle to deliver</td>
+</tr>
+<tr>
+<td>lat</td>
+<td>optional</td>
+<td>user&#39;s lat during update</td>
+</tr>
+<tr>
+<td>lon</td>
+<td>optional</td>
+<td>user&#39;s lon during update</td>
+</tr>
+</tbody></table>
+<h3 id='see-pending-delivery-requests'>See pending delivery requests</h3>
+<p>If user is approved by admin as a delivery person,they can see pending requests for people wanting a vehicle delivered to them</p>
+
+<blockquote>
+<p>This API call returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Status updated"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
+
+     </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+
+           </span><span class="s2">"timstampRequested"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-12 07:15:20 GMT"</span><span class="p">,</span><span class="w">
+           </span><span class="s2">"lon"</span><span class="p">:</span><span class="mf">47.233223</span><span class="p">,</span><span class="w">
+           </span><span class="s2">"lat"</span><span class="p">:</span><span class="mf">-100.332</span><span class="w">
+           </span><span class="s2">"address"</span><span class="p">:</span><span class="s2">"82 Sambong-ro, Seoul, KR"</span><span class="p">,</span><span class="w">
+           </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"adultscooter"</span><span class="p">,</span><span class="w">
+           </span><span class="s2">"descriptionOfWherabouts"</span><span class="p">:</span><span class="s2">"Information provided by user of where to drop of scooter"</span><span class="p">,</span><span class="w">
+           </span><span class="s2">"userContactInfo"</span><span class="p">:</span><span class="s2">"email or phone of user who is getting vehicle for delivery person to call"</span><span class="w">
+
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+
+           </span><span class="s2">"timstampRequested"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-03-12 08:15:40 GMT"</span><span class="p">,</span><span class="w">
+           </span><span class="s2">"lon"</span><span class="p">:</span><span class="mf">46.233223</span><span class="p">,</span><span class="w">
+           </span><span class="s2">"lat"</span><span class="p">:</span><span class="mf">-110.332</span><span class="w">
+           </span><span class="s2">"address"</span><span class="p">:</span><span class="s2">"82 Sambong-ro, Seoul, KR"</span><span class="p">,</span><span class="w">
+           </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"moped"</span><span class="p">,</span><span class="w">
+           </span><span class="s2">"descriptionOfWherabouts"</span><span class="p">:</span><span class="s2">"Information provided by user of where to drop of scooter"</span><span class="p">,</span><span class="w">
+           </span><span class="s2">"userContactInfo"</span><span class="p">:</span><span class="s2">"email or phone of user who is getting vehicle for delivery person to call"</span><span class="w">
+
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-21'>HTTP Request</h3>
+<p><code>GET http://api.bbali.com/delivery/opportunities</code></p>
+<h3 id='query-parameters-21'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userAuth</td>
+<td>required</td>
+<td>users Authentication token</td>
+</tr>
+<tr>
+<td>status</td>
+<td>required</td>
+<td>available, unavailable, permanently quiting, headingToVehicle, deliveringVehicle</td>
+</tr>
+<tr>
+<td>lat</td>
+<td>required</td>
+<td>delivery person lat</td>
+</tr>
+<tr>
+<td>lon</td>
+<td>required</td>
+<td>delivery person lon</td>
+</tr>
+<tr>
+<td>radius</td>
+<td>optional</td>
+<td>in kilometers the radius the user is open to going from their current location to deliver</td>
+</tr>
+</tbody></table>
+<h1 id='credits'>Credits</h1>
+<p>User&#39;s automatically get 5,000 KRW (or $5 depending if they are outside of Korea), when they sign up if that feature is on (controlled by admins). If a user recieved credit from admin, these credits are transferrable. If they received credits from signing up or from referral, these credits are not transferrable. If user uses a promo code when signing up, then they do not get the default signup credits if that feature is activated.</p>
+<h3 id='see-available-credits'>See available credits</h3>
+<p>API call allows a user to see how much in curency they have available in free ride credits</p>
+
+<blockquote>
+<p>This API call returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"You have 5,000 KRW in credits"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
+
+     </span><span class="p">{</span><span class="w">
+
+      </span><span class="s2">"creditsAmount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5000"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"currency"</span><span class="p">:</span><span class="s2">"KRW"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"conversionToUSD"</span><span class="p">:</span><span class="w"> </span><span class="mf">4.45</span><span class="w">
+
+    </span><span class="p">}</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-22'>HTTP Request</h3>
+<p><code>GET http://api.bbali.com/credits/</code></p>
+<h3 id='query-parameters-22'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userAuth</td>
+<td>required</td>
+<td>users Authentication token</td>
+</tr>
+<tr>
+<td>lat</td>
+<td>optional</td>
+<td>user&#39;s lat when making request</td>
+</tr>
+<tr>
+<td>lon</td>
+<td>optional</td>
+<td>user&#39;s lon when making request</td>
+</tr>
+</tbody></table>
+
+<p>User&#39;s automatically get 5,000 KRW (or $5 depending if they are outside of Korea), when they sign up if that feature is on (controlled by admins). If a user recieved credit from admin, these credits are transferrable. If they received credits from signing up or from referral, these credits are not transferrable. If user uses a promo code when signing up, then they do not get the default signup credits if that feature is activated.</p>
+<h3 id='sendcredits'>SendCredits</h3>
+<p>API call allows a user to send credits that they received from an admin. Also sends a push notification and email to recieving user. If email is not a user, it still sends email with a promo code the user can unlock the credits with when they sign up</p>
+
+<blockquote>
+<p>This API call returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Credits sent"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
+
+     </span><span class="p">{</span><span class="w">
+
+      </span><span class="s2">"creditsAmount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5000"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"currency"</span><span class="p">:</span><span class="s2">"KRW"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"conversionToUSD"</span><span class="p">:</span><span class="w"> </span><span class="mf">4.45</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"recievingUserHasAccount"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+
+    </span><span class="p">}</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-23'>HTTP Request</h3>
+<p><code>POST http://api.bbali.com/credits/send</code></p>
+<h3 id='query-parameters-23'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userAuth</td>
+<td>required</td>
+<td>users Authentication token</td>
+</tr>
+<tr>
+<td>toUserEmail</td>
+<td>required (if not sending phone number)</td>
+<td>the receiving user&#39;s email</td>
+</tr>
+<tr>
+<td>toUserPhone</td>
+<td>required (if not sending email)</td>
+<td>the receiving user&#39;s email</td>
+</tr>
+<tr>
+<td>lat</td>
+<td>optional</td>
+<td>user&#39;s lat when making request</td>
+</tr>
+<tr>
+<td>lon</td>
+<td>optional</td>
+<td>user&#39;s lon when making request</td>
+</tr>
+</tbody></table>
+<h1 id='referral-codes'>Referral Codes</h1><h3 id='create-referral-code'>Create Referral Code</h3>
+<p>Code is created for each user when they first click the refer your friends button in the application</p>
+
+<blockquote>
+<p>This API call returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Referral code successfully created"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
+
+     </span><span class="p">{</span><span class="w">
+
+      </span><span class="s2">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4K49U"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"createdWhileReferFriendOn"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"amountAssociatedWithCode"</span><span class="p">:</span><span class="mi">5000</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"currency"</span><span class="p">:</span><span class="s2">"KRW"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-24'>HTTP Request</h3>
+<p><code>GET http://api.bbali.com/referral/</code></p>
+<h3 id='query-parameters-24'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userAuth</td>
+<td>required</td>
+<td>users Authentication token</td>
+</tr>
+<tr>
+<td>lat</td>
+<td>optional</td>
+<td>user&#39;s lat when making request</td>
+</tr>
+<tr>
+<td>lon</td>
+<td>optional</td>
+<td>user&#39;s lon when making request</td>
+</tr>
+</tbody></table>
+<h3 id='use-promo-code'>Use Promo Code</h3>
+<p>API call allows a user, after signing up, to add a referral code to their account</p>
+
+<blockquote>
+<p>This API call returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Promo successfully code applied to your account"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
+
+     </span><span class="p">{</span><span class="w">
+
+      </span><span class="s2">"creditsAmount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5000"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"currency"</span><span class="p">:</span><span class="s2">"KRW"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"conversionToUSD"</span><span class="p">:</span><span class="w"> </span><span class="mf">4.45</span><span class="w">
+
+    </span><span class="p">}</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-25'>HTTP Request</h3>
+<p><code>POST http://api.bbali.com/referral/usecode</code></p>
+<h3 id='query-parameters-25'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userAuth</td>
+<td>required</td>
+<td>users Authentication token</td>
+</tr>
+<tr>
+<td>code</td>
+<td>required</td>
+<td>the 6-character referral code being used</td>
+</tr>
+<tr>
+<td>lat</td>
+<td>optional</td>
+<td>user&#39;s lat when making request</td>
+</tr>
+<tr>
+<td>lon</td>
+<td>optional</td>
+<td>user&#39;s lon when making request</td>
+</tr>
+</tbody></table>
+<h1 id='payments'>Payments</h1><h3 id='add-payment-method'>Add Payment Method</h3>
+<p>API call that creates a payment method for a user</p>
+
+<blockquote>
+<p>This API call returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Payment Method successfully added"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
+
+     </span><span class="p">{</span><span class="w">
+
+      </span><span class="s2">"encryptypedNumbers"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4K49USHD3282388232"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"identifier"</span><span class="p">:</span><span class="mi">438834</span><span class="w">
+
+    </span><span class="p">}</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-26'>HTTP Request</h3>
+<p><code>POST http://api.bbali.com/paymentMethod/</code></p>
+<h3 id='query-parameters-26'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userAuth</td>
+<td>required</td>
+<td>users Authentication token</td>
+</tr>
+<tr>
+<td>type</td>
+<td>required</td>
+<td>CreditCard, ApplePay, AndroidPay</td>
+</tr>
+<tr>
+<td>credentials1</td>
+<td>required</td>
+<td>Credit card number, Apple Pay Token, Android Pay token</td>
+</tr>
+<tr>
+<td>credentials2</td>
+<td>optional if not credit card</td>
+<td>If credit card, expiration date (e.g. 12/22)</td>
+</tr>
+<tr>
+<td>credentials3</td>
+<td>optional if not credit card</td>
+<td>CCV</td>
+</tr>
+<tr>
+<td>credentials4</td>
+<td>optional if not credit card</td>
+<td>billing country</td>
+</tr>
+<tr>
+<td>credentials5</td>
+<td>optional if not credit card</td>
+<td>billing address</td>
+</tr>
+<tr>
+<td>credentials6</td>
+<td>optional if not credit card</td>
+<td>billing city</td>
+</tr>
+<tr>
+<td>credentials7</td>
+<td>optional if not credit card</td>
+<td>billing name</td>
+</tr>
+<tr>
+<td>credentials8</td>
+<td>optional</td>
+<td>billing postal (post people dont know their zip and its not required in Korea)</td>
+</tr>
+<tr>
+<td>lat</td>
+<td>optional</td>
+<td>user&#39;s lat when making request</td>
+</tr>
+<tr>
+<td>lon</td>
+<td>optional</td>
+<td>user&#39;s lon when making request</td>
+</tr>
+</tbody></table>
+<h3 id='update-payment-method'>Update Payment Method</h3>
+<p>API call allows user to update credit card information ,remove payment method, or set as default</p>
+
+<blockquote>
+<p>This API call returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Payment Method information successfully updated"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
+
+     </span><span class="p">{</span><span class="w">
+
+
+      </span><span class="s2">"identifier"</span><span class="p">:</span><span class="mi">438834</span><span class="w">
+
+    </span><span class="p">}</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-27'>HTTP Request</h3>
+<p><code>PUT http://api.bbali.com/paymentMethod/</code></p>
+<h3 id='query-parameters-27'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userAuth</td>
+<td>required</td>
+<td>users Authentication token</td>
+</tr>
+<tr>
+<td>paymentMethodIdentifier</td>
+<td>required</td>
+<td>user&#39;s payment method identifier</td>
+</tr>
+<tr>
+<td>credentials1</td>
+<td>optional if its not thing being updated</td>
+<td>Credit card number, Apple Pay Token, Android Pay token</td>
+</tr>
+<tr>
+<td>status</td>
+<td>optional if its not thing being updated</td>
+<td>default, notdefault, remove</td>
+</tr>
+<tr>
+<td>credentials2</td>
+<td>optional if not credit card</td>
+<td>If credit card, expiration date (e.g. 12/22)</td>
+</tr>
+<tr>
+<td>credentials3</td>
+<td>optional if not credit card</td>
+<td>CCV</td>
+</tr>
+<tr>
+<td>credentials4</td>
+<td>optional if not credit card</td>
+<td>billing country</td>
+</tr>
+<tr>
+<td>credentials5</td>
+<td>optional if not credit card</td>
+<td>billing address</td>
+</tr>
+<tr>
+<td>credentials6</td>
+<td>optional if not credit card</td>
+<td>billing city</td>
+</tr>
+<tr>
+<td>credentials7</td>
+<td>optional if not credit card</td>
+<td>billing name</td>
+</tr>
+<tr>
+<td>credentials8</td>
+<td>optional</td>
+<td>billing postal (post people dont know their zip and its not required in Korea)</td>
+</tr>
+<tr>
+<td>lat</td>
+<td>optional</td>
+<td>user&#39;s lat when making request</td>
+</tr>
+<tr>
+<td>lon</td>
+<td>optional</td>
+<td>user&#39;s lon when making request</td>
+</tr>
+</tbody></table>
+<h3 id='authorize-payment-method'>Authorize Payment Method</h3>
+<p>API call is made when user is booking a ride and authorizes the default or selected payment method for  10,000KRW (or $9 if outside Korea). If this fails, user is asked to try another payment method.</p>
+
+<blockquote>
+<p>This API call returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Payment Method successfully authorized for your trip"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
+
+     </span><span class="p">{</span><span class="w">
+
+
+      </span><span class="s2">"identifier"</span><span class="p">:</span><span class="mi">438834</span><span class="w">
+
+    </span><span class="p">}</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-28'>HTTP Request</h3>
+<p><code>POST http://api.bbali.com/paymentMethod/authorize</code></p>
+<h3 id='query-parameters-28'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userAuth</td>
+<td>required</td>
+<td>users Authentication token</td>
+</tr>
+<tr>
+<td>paymentMethodIdentifier</td>
+<td>required</td>
+<td>user&#39;s payment method identifier</td>
+</tr>
+<tr>
+<td>lat</td>
+<td>optional</td>
+<td>user&#39;s lat when making request</td>
+</tr>
+<tr>
+<td>lon</td>
+<td>optional</td>
+<td>user&#39;s lon when making request</td>
+</tr>
+</tbody></table>
+<h1 id='admin'>Admin</h1><h3 id='make-admin'>Make Admin</h3>
+<p>When first user creates an account on the application that user is set as admin and can give admin permissions to future users</p>
+
+<p>API call allows one user to make another user an admin if they are an admin</p>
+
+<blockquote>
+<p>This API call returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"You have successully updated user #48348 to an admin account"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
+
+     </span><span class="p">{</span><span class="w">
+
+      </span><span class="s2">"usersId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4K49USHD3282388232"</span><span class="p">,</span><span class="w">
+
+
+    </span><span class="p">}</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-29'>HTTP Request</h3>
+<p><code>POST http://api.bbali.com/admin/makeAdmin</code></p>
+<h3 id='query-parameters-29'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userAuth</td>
+<td>required</td>
+<td>users Authentication token</td>
+</tr>
+<tr>
+<td>toUsersEmail</td>
+<td>required, if no phone</td>
+<td>email of user being made admin if no phone is provided</td>
+</tr>
+<tr>
+<td>toUsersPhone</td>
+<td>required, if no email</td>
+<td>phone of user being made admin if no phone is provided</td>
+</tr>
+</tbody></table>
+<h3 id='send-credit'>Send Credit</h3>
+<p>API call allows admins to send credits to users. Admins do not need credits in their accounts to send credits. Max credit a admin can send to one user is equivalent to $100 USD.</p>
+
+<blockquote>
+<p>This API call returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"You have successully sent credits to User ID 4845845"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
+
+     </span><span class="p">{</span><span class="w">
+
+      </span><span class="s2">"usersId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4K49USHD3282388232"</span><span class="w">
+
+
+    </span><span class="p">}</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-30'>HTTP Request</h3>
+<p><code>POST http://api.bbali.com/admin/sendCredits</code></p>
+<h3 id='query-parameters-30'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userAuth</td>
+<td>required</td>
+<td>users Authentication token</td>
+</tr>
+<tr>
+<td>toUsersEmail</td>
+<td>required, if no phone</td>
+<td>email of user being made admin if no phone is provided</td>
+</tr>
+<tr>
+<td>toUsersPhone</td>
+<td>required, if no email</td>
+<td>phone of user being made admin if no phone is provided</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>required</td>
+<td>amount of currency to send to user</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>required</td>
+<td>defaults to KRW</td>
+</tr>
+</tbody></table>
+<h3 id='search-nearby-users'>Search nearby users</h3>
+<p>API call allows admins to see all users nearby within a certain radius</p>
+
+<blockquote>
+<p>This API call returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"You have successully sent credits to User ID 4845845"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
+
+    </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+
+        </span><span class="s2">"usersId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4K49USHD3282388232"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"userEmail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user@email.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"Yoon Jenny"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"userPhone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+82 3456548383"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"userLon"</span><span class="p">:</span><span class="w"> </span><span class="mf">20.30000</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"userLat"</span><span class="p">:</span><span class="w"> </span><span class="mf">190.02020</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"userAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"82 Samonbong-ro, Seouk, KR"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"isAdmin"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"isMechanic"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"isCharger"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"isDeliveryPerson"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"currentLat"</span><span class="p">:</span><span class="mf">100.3232</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"currentLon"</span><span class="p">:</span><span class="mf">93.02020</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"lastUse"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-04-31 12:30:21 GMT"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"notSuspended"</span><span class="w">
+
+
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+
+        </span><span class="s2">"usersId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5K49USHD3282388232"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"userEmail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"name@email.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"userPhone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+82 3456548383"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"Dave Thomas"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"userLon"</span><span class="p">:</span><span class="w"> </span><span class="mf">20.30000</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"userLat"</span><span class="p">:</span><span class="w"> </span><span class="mf">190.02020</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"userAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"82 Samonbong-ro, Seouk, KR"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"applicationTextSubmitted"</span><span class="p">:</span><span class="s2">"I want to me a mechanic and here ar emy crednetials"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"isAdmin"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"isMechanic"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"isCharger"</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"isDeliveryPerson"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"currentLat"</span><span class="p">:</span><span class="mf">100.3232</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"currentLon"</span><span class="p">:</span><span class="mf">93.02020</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"lastUse"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-04-31 12:30:21 GMT"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"notSuspended"</span><span class="w">
+
+
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-31'>HTTP Request</h3>
+<p><code>GET http://api.bbali.com/admin/searchNearby</code></p>
+<h3 id='query-parameters-31'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userAuth</td>
+<td>required</td>
+<td>users Authentication token</td>
+</tr>
+<tr>
+<td>lon</td>
+<td>optional</td>
+<td>admin&#39;s current longitude</td>
+</tr>
+<tr>
+<td>lat</td>
+<td>optional</td>
+<td>admin&#39;s current latitude</td>
+</tr>
+<tr>
+<td>email</td>
+<td>optional</td>
+<td>if admin is searching by email</td>
+</tr>
+<tr>
+<td>name</td>
+<td>optional</td>
+<td>if admin is searching by name</td>
+</tr>
+<tr>
+<td>radius</td>
+<td>optional</td>
+<td>if admin is setting a radius for geofence for their query, defaults to 20 kilometers</td>
+</tr>
+</tbody></table>
+<h3 id='update-user'>Update User</h3>
+<p>API call allows admins to see update user using their email or phone as the query. Admin can also take away another admin&#39;s privelges if their user account became an admin before the editted query.</p>
+
+<blockquote>
+<p>This API call returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"You have successully updated User ID 4845845"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
+
+     </span><span class="p">{</span><span class="w">
+
+      </span><span class="s2">"usersId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4K49USHD3282388232"</span><span class="w">
+
+
+    </span><span class="p">}</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-32'>HTTP Request</h3>
+<p><code>PUT http://api.bbali.com/admin/updateUser</code></p>
+<h3 id='query-parameters-32'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userAuth</td>
+<td>required</td>
+<td>user authenication token</td>
+</tr>
+<tr>
+<td>usersEmail</td>
+<td>required, if no phone</td>
+<td>email of user being updated</td>
+</tr>
+<tr>
+<td>userPhone</td>
+<td>required, if no email</td>
+<td>phone of user being updated</td>
+</tr>
+<tr>
+<td>isMechanic</td>
+<td>optional</td>
+<td>If admin is making user a mechanic, sets to true or false to permit or deny user particular status/type</td>
+</tr>
+<tr>
+<td>isCharger</td>
+<td>optional</td>
+<td>If admin is making user a charger, sets to true or false to permit or deny user particular status/type</td>
+</tr>
+<tr>
+<td>isDeliveryPerson</td>
+<td>optional</td>
+<td>If admin is making user a deliveryPerson, sets to true or false to permit or deny user particular status/type</td>
+</tr>
+<tr>
+<td>status</td>
+<td>optional</td>
+<td>If admin is making user a active or suspended</td>
+</tr>
+</tbody></table>
+<h3 id='create-vehicle'>Create Vehicle</h3>
+<p>API call allows an admin to create a vehicle</p>
+
+<blockquote>
+<p>This API call returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"You have successully created a vehicle"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
+
+     </span><span class="p">{</span><span class="w">
+
+      </span><span class="s2">"vehicleName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4K49UG5"</span><span class="w">
+
+
+    </span><span class="p">}</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-33'>HTTP Request</h3>
+<p><code>POST http://api.bbali.com/admin/createVehicle</code></p>
+<h3 id='query-parameters-33'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userAuth</td>
+<td>required</td>
+<td>user authenication token</td>
+</tr>
+<tr>
+<td>vehiclePhoto</td>
+<td>optional</td>
+<td>photo of vehicle</td>
+</tr>
+<tr>
+<td>originalLat</td>
+<td>required</td>
+<td>original latitude of the vehicle</td>
+</tr>
+<tr>
+<td>originalLon</td>
+<td>required</td>
+<td>original longitude of the vehicle</td>
+</tr>
+<tr>
+<td>type</td>
+<td>required</td>
+<td>adultscooter, kidscooter, moped, car.</td>
+</tr>
+<tr>
+<td>unlockSeed</td>
+<td>optional</td>
+<td>The unlock seed of the vehicle so the server can stay synced in order to unlock and have the right timed unlock code</td>
+</tr>
+<tr>
+<td>description</td>
+<td>optional</td>
+<td>Description of the vehicle</td>
+</tr>
+</tbody></table>
+<h3 id='update-vehicle'>Update Vehicle</h3>
+<p>API call allows an admin to edit a vehicle&#39;s information</p>
+
+<blockquote>
+<p>This API call returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"You have successully editted vehicle"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
+
+     </span><span class="p">{</span><span class="w">
+
+      </span><span class="s2">"vehicleName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4K49UG5"</span><span class="w">
+
+
+    </span><span class="p">}</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-34'>HTTP Request</h3>
+<p><code>PUT http://api.bbali.com/admin/editVehicle</code></p>
+<h3 id='query-parameters-34'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userAuth</td>
+<td>required</td>
+<td>user authenication token</td>
+</tr>
+<tr>
+<td>vehicleName</td>
+<td>required</td>
+<td>unique identifier of the vehicle</td>
+</tr>
+<tr>
+<td>vehiclePhoto</td>
+<td>optional</td>
+<td>photo of vehicle</td>
+</tr>
+<tr>
+<td>originalLat</td>
+<td>optional</td>
+<td>latitude of the vehicle if editing this</td>
+</tr>
+<tr>
+<td>originalLon</td>
+<td>optional</td>
+<td>longitude of the vehicle if editing this</td>
+</tr>
+<tr>
+<td>type</td>
+<td>optional</td>
+<td>adultscooter, kidscooter, moped, car.</td>
+</tr>
+<tr>
+<td>unlockSeed</td>
+<td>optional</td>
+<td>If changing: The unlock seed of the vehicle so the server can stay synced in order to unlock and have the right timed unlock code</td>
+</tr>
+<tr>
+<td>description</td>
+<td>optional</td>
+<td>Description of the vehicle</td>
+</tr>
+<tr>
+<td>batteryPower</td>
+<td>optional</td>
+<td>float of the battery power</td>
+</tr>
+<tr>
+<td>status</td>
+<td>optional</td>
+<td>available, riding, charging, locked, unavailable, broken</td>
+</tr>
+</tbody></table>
+<h3 id='view-special-user-applications'>View Special User Applications</h3>
+<p>API call allows admins to see applications for chargers, mechanics and delivery people</p>
+
+<blockquote>
+<p>This API call returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> 
+  </span><span class="s2">"msg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Special User Applications loaded (500 total)"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w">
+    </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+
+        </span><span class="s2">"usersId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4K49USHD3282388232"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"userEmail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user@email.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"Yoon Jenny"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"userPhone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+82 3456548383"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"userLon"</span><span class="p">:</span><span class="w"> </span><span class="mf">20.30000</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"userLat"</span><span class="p">:</span><span class="w"> </span><span class="mf">190.02020</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"userAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"82 Samonbong-ro, Seouk, KR"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"applicationTextSubmitted"</span><span class="p">:</span><span class="s2">"I want to me a mechanic and here ar emy crednetials"</span><span class="w">
+
+
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+
+        </span><span class="s2">"usersId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5K49USHD3282388232"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"userEmail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"name@email.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"userPhone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+82 3456548383"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"Dave Thomas"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"userLon"</span><span class="p">:</span><span class="w"> </span><span class="mf">20.30000</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"userLat"</span><span class="p">:</span><span class="w"> </span><span class="mf">190.02020</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"userAddress"</span><span class="p">:</span><span class="w"> </span><span class="s2">"82 Samonbong-ro, Seouk, KR"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"applicationTextSubmitted"</span><span class="p">:</span><span class="s2">"I want to me a mechanic and here ar emy crednetials"</span><span class="w">
+
+
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-35'>HTTP Request</h3>
+<p><code>POST http://api.bbali.com/admin/viewApplications</code></p>
+<h3 id='query-parameters-35'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>userAuth</td>
+<td>required</td>
+<td>users Authentication token</td>
+</tr>
+<tr>
+<td>lon</td>
+<td>required</td>
+<td>admin&#39;s current longitude</td>
+</tr>
+<tr>
+<td>lat</td>
+<td>required</td>
+<td>admin&#39;s current latitude</td>
+</tr>
+<tr>
+<td>radius</td>
+<td>optional</td>
+<td>defaults to 20000 kilometers to see applications globally</td>
+</tr>
+</tbody></table>
+<h1 id='errors'>Errors</h1>
+<aside class="notice">
+This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
+</aside>
+
+<p>The Kittn API uses the following error codes:</p>
+
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Bad Request -- Your request is invalid.</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized -- Your API key is wrong.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found -- The specified kitten could not be found.</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
+</tr>
+<tr>
+<td>406</td>
+<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Gone -- The kitten requested has been removed from our servers.</td>
+</tr>
+<tr>
+<td>418</td>
+<td>I&#39;m a teapot.</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+      </div>
+    </div>
+  </body>
+</html>
