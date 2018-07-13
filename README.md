@@ -10,8 +10,8 @@ Read the docs here:
 Original concept screenshots of the application to give context to how the API is being consumed:
 
 
-![Screenshot of Bbali](https://imgur.com/O1rWLI5)
-![Screenshot of Bbali](https://imgur.com/Z1NqTes)
+![Screenshot of Bbali](https://imgur.com/O1rWLI5.png)
+![Screenshot of Bbali](https://imgur.com/Z1NqTes.png)
 ![Screenshot of Bbali](https://octodex.github.com/images/yaktocat.png)
 ![Screenshot of Bbali](https://octodex.github.com/images/yaktocat.png)
 ![Screenshot of Bbali](https://octodex.github.com/images/yaktocat.png)
