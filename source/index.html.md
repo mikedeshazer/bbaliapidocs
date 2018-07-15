@@ -127,6 +127,8 @@ Upon completion, whenever his status is set to available, he gets push notificat
 After he fixes he marks scooter as repaired in the app or brings to Bbali shop. Fix materials are provided by Bbali. When starting repair he selected estimated fix time.
 
 Once he returns it to Bbali shop and admin confirms as fixed, he gets 10 usd in the app in form of ether which he can convert to ride credits or transfer off the platform.
+
+
 --------------
 
 
@@ -521,6 +523,77 @@ userLon | optional | Longitude of user editting
 isCharger | optional | toggles off charger or on user as charger if they were approved
 isMechanic | optional | toggles of mechanic mode or on user as mechanic if they were approved
 isDelivery | optional | toggles of "I'm a delivery person" or on user as delivery person if they were approved
+
+
+
+
+## Forgot User Password
+
+This endpoint accepts an email address and sends a reset link to the user if the user account exists
+
+> This API call returns JSON structured like this:
+
+```json
+{ "error": false, 
+  "msg": "E-mail sent with reset instructions",
+  "data":
+    
+      {
+        "email": "mike@bbali.io",
+        
+       
+      }
+   
+}
+```
+
+
+
+### HTTP Request
+
+`POST http://api.bbali.com/users/forgotPassword`
+
+### Query Parameters
+
+Parameter | Required | Description
+--------- | ------- | -----------
+email | required | User email 
+
+
+
+## Reset User Password
+
+This endpoint receives a new user password and the token created by the forgot password enpoint that is only shared to a user's email and stored server-side
+
+> This API call returns JSON structured like this:
+
+```json
+{ "error": false, 
+  "msg": "Password successfully changed",
+  "data":
+    
+      {
+        "email": "mike@bbali.io",
+        
+       
+      }
+   
+}
+```
+
+
+
+### HTTP Request
+
+`PUT http://api.bbali.com/users/resetPassword`
+
+### Query Parameters
+
+Parameter | Required | Description
+--------- | ------- | -----------
+resetToken | required | Forgot password reset token that was sent in the link URL of a user's inbox message
+newPassword | required | User's new password
+
 
 
 
@@ -1456,6 +1529,92 @@ userAuth | required | users Authentication token
 paymentMethodIdentifier | required | user's payment method identifier
 lat | optional| user's lat when making request
 lon| optional | user's lon when making request
+
+
+
+
+### Send Cryptocurrency
+
+API call allows a user to send bicoin or ether from their account to another user or cryptocurrency address
+
+> This API call returns JSON structured like this:
+
+```json
+{ "error": false, 
+  "msg": "Ether successfully sent",
+  "data":
+    
+     {
+    
+    
+      "transactionID":"0x3453455342dfgfgddgf55445",
+      "confUrl":"https://etherscan.com/tx/345534453sfssdf344et435534",
+      "transactionFee":".0001 BTC"
+      
+    }
+   
+}
+```
+
+
+
+### HTTP Request
+
+`POST http://api.bbali.com/payments/sendCrypto`
+
+### Query Parameters
+
+Parameter | Required | Description
+--------- | ------- | -----------
+userAuth | required | users Authentication token
+toAddress | required if user email not set | the address the payment is being sent to
+toEmail | required if toAddress not set | the email of another bbali user the payment is being sent to
+amount | required  | amount of crypto the user is sending. Must have this amount plus the miner network transaction fee to send
+type | required  | either bitcoin or ether
+
+
+
+
+
+### Convert Credits/Crypto
+
+API call allows a user to convert bitcoin/ether into ride credits or ride credits into bitcoin or ether
+
+> This API call returns JSON structured like this:
+
+```json
+{ "error": false, 
+  "msg": "Conversion successful",
+  "data":
+    
+     {
+    
+    
+      "transactionID":"0x3453455342dfgfgddgf55445",
+      "confUrl":"https://etherscan.com/tx/345534453sfssdf344et435534",
+      "transactionFee":".0001 BTC",
+      "conversionRateAtExecution":"520 USD/ether"
+      
+    }
+   
+}
+```
+
+
+
+### HTTP Request
+
+`POST http://api.bbali.com/payments/convertCrypto`
+
+### Query Parameters
+
+Parameter | Required | Description
+--------- | ------- | -----------
+userAuth | required | users Authentication token
+startCurrency | required  | KRW, USD, BTC or ETH
+endCurrency | required | KRW, USD, BTC or ETH
+amount | required | how much of the base currency they are converting
+
 
 
 
