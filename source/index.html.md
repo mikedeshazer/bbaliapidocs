@@ -4,7 +4,7 @@ title: Bbali API Reference
 
 
 toc_footers:
-  - <a href='https://wwww.bbali.io'>Documentation by bbali</a>
+  - <a href='https://www.bbali.io'>Documentation by bbali</a>
 
 includes:
   - errors
@@ -14,12 +14,140 @@ search: true
 
 # Introduction
 
-Welcome to the Bbali API! This documentation powers the Bbali mobile application for shared scooter rentals. Users can find scooters nearb them, rent them on-demand, and then drop them off wherever they like. Users can signup as chargers and receive scooters at their location for charging at a fee. Some users can sign up as delivery people and deliver scooters to people who want to use the "devliver to me" option.
+Welcome to the Bbali API! This documentation powers the Bbali mobile application for shared scooter rentals. Users can find scooters nearby them, rent them on-demand, and then drop them off wherever they would like. Users can signup as chargers and receive/pick-up scooters at their location for charging at a fee. Some users can sign up as delivery people and deliver scooters to people who want to use the "deliver to me" option instead of the pickup option.
 Admins of the application can send free credits to users, and toggle features such as the ability for users to send share codes to friends to get free rides (as well as adjust how much they want to send in free rides). Admins can also make other users admins, block users, check users ride status/history, and edit credits. 
-
-
+One of the most awesome features is that the Bbali app is also a crypto wallet for Bitcoin and Ether. Users can get paid as mechanics, delivery people and chargers in crypto. Riders can optionally pay for rides in crypto. Ride credits are also transferable and can be converted into crypto and sent off-platform.
 
 This API will be written in Node.js with Mongo database.
+
+
+# User Stories
+
+### Bbali is a super-easy-to-use application for renting electric scooters.
+
+You can either
+
+A) walk up to a scooter, scan it’s QR code to unlock it, and ride it as long as you would like
+
+B) Order a scooter to be delivered to you
+
+C) see a map of nearby scooters and rent the one nearest to you before you reach it
+
+———
+
+Unique aspects of the mobile application:
+
+During promotional periods, new users get $5 (or equivalent in local currency) in rental credits
+
+Every user gets a unique promotional link. When friends they refer sign up with their special link or promo code, the referrer gets $5 in free ride credits and so does their friend, after the friends first ride.
+
+Users signup in the app and become chargers, mechanics and/or delivery people. All payments are in cryptocurrency. Users can pay for rides with cryptocurrency (bitcoin or ether) or send crypto outside the app to crypto exchanges (for conversion to cash), cold storage (For saving off the platform) or other users.
+
+Here are some typical user scenarios:
+
+## The new college student male user
+Happy during first-time use because the signup process automatically picks up his phone number and all he has to do is create a password. There is also the option to signup with email, but he prefers to easier process, but likes the option. After signing up he can optionally add a name. He accepts the terms of service which highlight Bbali is not liable for any accidents or scooter defects.
+
+He immediately sees scoooters nearby. Selects one, sees its specs including max speed of 30km per hour. He reserves the scooter for 2 hours since paying as you go is a bit more expensive. The app tells him just one more step before confirming his pickup.
+
+Fortunately he already has Android Pay on his phone and just accepts apps permission to use that option instead of scanning a credit card or using crypto, such as bitcoin or ethereal.
+
+There are instructions that his scooter is near a bike rack he knows near a nearby parking lot. He is informed that he has 30 mins to get to the scooter and unlock it or his reservation will be cancelled.
+
+He heads to the scooter and upon reaching it, he simple clicks the QR code button at the upper right on each screen. He scans the QR on top of the scooter. The app gives him the temporary passcode for that scooter that has a 30 second timer before new code is generated. He punches the code into the scooter and it’s unlocked. When he scanned the QR code, he gets a push notification that his ride has started. The default screen once he finishes reservation is the how to use screen.
+
+He is surprised how easy it is to use. He rides for 10mins to his girlfriend’s dorm. When he reaches her dorm he parks it in her hallway because it’s so easy to fold and bring up stairs. He clicks the lock button. After talking for a bit they head to a nearby parking lot and ride it around switching use after unlocking it with the timed unlock code in the app.
+
+After 1 hour, he is finished and clicks end ride. He is notified that he can get 1 dollar off if he returns it to a nearby Bbali shop. He prefers not to, parks it where he is, and clicks checkout in the app. That’s the default screen whenever he opens the app when he is riding. Also while riding, the checkout button has replaced the QRcode button that used to be on each screen
+
+After checking it out, he receives a push notification with a link to a receipt as well as the option to rate his ride. He gives it 5 stars. The app also reminds him that he gets a 5 dollar credit when he refers the app to his friend. He asks his girlfriend to signup. She does and she uses his promo code when signing up. She automatically gets 5 credits. She add bitcoin as her payment option, loads 25 bucks which is the minimum deposit amount and starts her ride to her friends apt. When she does, her boyfriend gets a push notification that he has received 5 bucks in credits. The next time he rides, it lets him know the credits will be used as default payment method and remainder will be applied to his Android Pay account.
+
+The next time he rides, he books a scooter for a whole day. However at the end, he his card can’t process the payment. He ends his ride and he is sent a push notification. After that he tries to reserve again but it asks him to confirm payment for his last trip or add a new payment option. The only thing originally charged came from the 10 dollar authorization that’s made each time a user checks in to a vehicle.
+
+---------
+
+## The couple that rents at the park at a Bbali popup shop
+
+A couple is walking through a park seeing a bunch of people having fun riding around on scooters. They see a Bbali popup stand where people wearing Bbali T-shirts are standing around.
+
+It says 5 bucks an hour. They show their ids to the staff and pay 5 bucks. They download the app and quickly signup. The staff sends 5 bucks to their accounts. Because credits are sent from an admin, their ride does not require them authorize a payment method.
+
+The staff scans the scooters with their phones and they are off to ride. They ride a bit longer than expected and pay when they return for the extra time and the amount is credited in credits to their account which immediately are used to cover cost of their ride.
+
+They are also informed they can do anytime and don’t need to return to shop if they authorize a payment method in the app and pickup a scooter from another location.
+
+They are also advised to share with friends so they can get more credits for rides
+
+
+-----------
+
+## The babysitter turned charger/delivery person
+
+When passing by a Bbali scooter rental shop, she sees a sign saying “earn cryptocurrency charging and riding scooters”
+
+She walks into a shop and a staff member gets her email, sending her an e-brochure about signing up to be a charger and delivery person.
+
+She downloads the app, signs up and sees the option in the menu called become a charger. She can optionally apply with a message and enters a code she got from the staff member. She does same for “become a delivery person”
+When applying to be a charger it prompts her to enter the address and confirm on a map her home address where people can charge their scooters.
+A few hours later she gets an email requesting info such as her license photo. After sending she gets an email and push notification that she has been both approved as delivery person and charger.
+
+1 hour later, she gets a ping that there is a drop off opportunity. She clicks the accept button immediately, beating the other potential candidates. She sees its 5 bucks when it’s delivered. She walks 200 kilometers to where the scooter is. She scans the qr and gets the unlock code.
+
+She drives the scooter. The person requesting the scooter gets a notification both when the scooter is picked up as well as when they are driving to them, receiving estimated times based on the persons distance from their location and scooter speed.
+
+When she arrives, the person requesting its phone or email pops up and calls to let them know it’s delivered. She also marks it delivered in the app with a description of where exactly it is. The app also gets her geolocation for where the drop off is.
+
+The ordering user goes to pickup the scooter and enters the pickup code from the app on the scooter to unlock and start their ride. The user also rates the delivery which affects which delivery people get a notification first.
+
+Later, the pickup person, because their charger status is flipped on, gets a notication that a scooter needs to charged. She goes to pick it up, charges at her home and then returns it where she got it from or a shop. She gets 2 bucks for every vehicle she recharges. That she picks up, and 50 cents for ones that are delivered to her by riders to charge. Riders get a 1 buck discount when they drop off scooters that need a recharge (Under 15 percent battery life or less)
+
+---------------
+
+
+## The crypto enthusiast
+
+Though he doesn’t care about riding scooters he is part of the crypto movement and supports anything that accepts crypto.
+
+After signing up he loads bitcoin and ether to his account.
+
+He goes around referring friends to use his promo code. Each time after they complete their first ride worth 5 bucks or more, he gets credits, he converts them to ether and sometimes transfers ether from the app to other friends for them to use the app. Sometimes he sends to an external crypto exchange to convert to cash.
+
+ When he converts credits to crypto his conversion spread is 10 percent below market price because risk bbali takes due to possible refunds by friends and price volatility considerations.
+
+----------
+
+## The techie turned Bbali mechanic
+
+A techie walks by a Bbali store and sees he can become a mechanic.
+He applies through the menu option in the app
+
+He gets email with trading video and takes an online quiz
+Upon completion, whenever his status is set to available, he gets push notifications. When he accepts a fix request, he goes to location, performs fixes on spot or takes to shop
+
+After he fixes he marks scooter as repaired in the app or brings to Bbali shop. Fix materials are provided by Bbali. When starting repair he selected estimated fix time.
+
+Once he returns it to Bbali shop and admin confirms as fixed, he gets 10 usd in the app in form of ether which he can convert to ride credits or transfer off the platform.
+--------------
+
+
+## The regular business man user who goes to and from work to lunch
+
+A man who works for national tax service likes to do fun activities with his employees. He has the Bbali app and occasionally uses scooters to go to and from lunch or home.
+
+He clicks the deliver to me option and selects that he wants 6 scooters delivered.
+
+A delivery person who has car is notified and picks up the 6 scooters after the mans payment is authorized for all scooters.
+
+The man gets a notification when the scooters are delivered. 
+Each person downloads the app and scans the vehicles to ride after adding payment and agreeing to liability terms. One scooter is not charged and delivery person charges it at location... he had already been doing so in car.
+
+One person backs out and the scooter is then available on the map for people at rent that are not in group after 30 mins.
+
+
+
+
+
+
 
 
 # Vehicles
