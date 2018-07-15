@@ -222,9 +222,6 @@
             <a href="#user-stories" class="toc-h1 toc-link" data-title="User Stories">User Stories</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#bbali-is-a-super-easy-to-use-application-for-renting-electric-scooters" class="toc-h2 toc-link" data-title="Bbali is a super-easy-to-use application for renting electric scooters.">Bbali is a super-easy-to-use application for renting electric scooters.</a>
-                  </li>
-                  <li>
                     <a href="#the-new-college-student-male-user" class="toc-h2 toc-link" data-title="The new college student male user">The new college student male user</a>
                   </li>
                   <li>
@@ -317,6 +314,9 @@
               <ul class="toc-list-h2">
                   <li>
                     <a href="#apply-to-become-charger" class="toc-h2 toc-link" data-title="Apply To Become Charger">Apply To Become Charger</a>
+                  </li>
+                  <li>
+                    <a href="#change-charger-status" class="toc-h2 toc-link" data-title="Change Charger Status">Change Charger Status</a>
                   </li>
               </ul>
           </li>
@@ -433,7 +433,9 @@ Admins of the application can send free credits to users, and toggle features su
 One of the most awesome features is that the Bbali app is also a crypto wallet for Bitcoin and Ether. Users can get paid as mechanics, delivery people and chargers in crypto. Riders can optionally pay for rides in crypto. Ride credits are also transferable and can be converted into crypto and sent off-platform.</p>
 
 <p>This API will be written in Node.js with Mongo database.</p>
-<h1 id='user-stories'>User Stories</h1><h3 id='bbali-is-a-super-easy-to-use-application-for-renting-electric-scooters'>Bbali is a super-easy-to-use application for renting electric scooters.</h3>
+<h1 id='user-stories'>User Stories</h1>
+<p>Bbali is a super-easy-to-use application for renting electric scooters.</p>
+
 <p>You can either</p>
 
 <p>A) walk up to a scooter, scan it’s QR code to unlock it, and ride it as long as you would like</p>
@@ -471,8 +473,6 @@ One of the most awesome features is that the Bbali app is also a crypto wallet f
 <p>After checking it out, he receives a push notification with a link to a receipt as well as the option to rate his ride. He gives it 5 stars. The app also reminds him that he gets a 5 dollar credit when he refers the app to his friend. He asks his girlfriend to signup. She does and she uses his promo code when signing up. She automatically gets 5 credits. She add bitcoin as her payment option, loads 25 bucks which is the minimum deposit amount and starts her ride to her friends apt. When she does, her boyfriend gets a push notification that he has received 5 bucks in credits. The next time he rides, it lets him know the credits will be used as default payment method and remainder will be applied to his Android Pay account.</p>
 
 <p>The next time he rides, he books a scooter for a whole day. However at the end, he his card can’t process the payment. He ends his ride and he is sent a push notification. After that he tries to reserve again but it asks him to confirm payment for his last trip or add a new payment option. The only thing originally charged came from the 10 dollar authorization that’s made each time a user checks in to a vehicle.</p>
-
-<hr>
 <h2 id='the-couple-that-rents-at-the-park-at-a-bbali-popup-shop'>The couple that rents at the park at a Bbali popup shop</h2>
 <p>A couple is walking through a park seeing a bunch of people having fun riding around on scooters. They see a Bbali popup stand where people wearing Bbali T-shirts are standing around.</p>
 
@@ -483,8 +483,6 @@ One of the most awesome features is that the Bbali app is also a crypto wallet f
 <p>They are also informed they can do anytime and don’t need to return to shop if they authorize a payment method in the app and pickup a scooter from another location.</p>
 
 <p>They are also advised to share with friends so they can get more credits for rides</p>
-
-<hr>
 <h2 id='the-babysitter-turned-charger-delivery-person'>The babysitter turned charger/delivery person</h2>
 <p>When passing by a Bbali scooter rental shop, she sees a sign saying “earn cryptocurrency charging and riding scooters”</p>
 
@@ -503,8 +501,6 @@ A few hours later she gets an email requesting info such as her license photo. A
 <p>The ordering user goes to pickup the scooter and enters the pickup code from the app on the scooter to unlock and start their ride. The user also rates the delivery which affects which delivery people get a notification first.</p>
 
 <p>Later, the pickup person, because their charger status is flipped on, gets a notication that a scooter needs to charged. She goes to pick it up, charges at her home and then returns it where she got it from or a shop. She gets 2 bucks for every vehicle she recharges. That she picks up, and 50 cents for ones that are delivered to her by riders to charge. Riders get a 1 buck discount when they drop off scooters that need a recharge (Under 15 percent battery life or less)</p>
-
-<hr>
 <h2 id='the-crypto-enthusiast'>The crypto enthusiast</h2>
 <p>Though he doesn’t care about riding scooters he is part of the crypto movement and supports anything that accepts crypto.</p>
 
@@ -513,8 +509,6 @@ A few hours later she gets an email requesting info such as her license photo. A
 <p>He goes around referring friends to use his promo code. Each time after they complete their first ride worth 5 bucks or more, he gets credits, he converts them to ether and sometimes transfers ether from the app to other friends for them to use the app. Sometimes he sends to an external crypto exchange to convert to cash.</p>
 
 <p>When he converts credits to crypto his conversion spread is 10 percent below market price because risk bbali takes due to possible refunds by friends and price volatility considerations.</p>
-
-<hr>
 <h2 id='the-techie-turned-bbali-mechanic'>The techie turned Bbali mechanic</h2>
 <p>A techie walks by a Bbali store and sees he can become a mechanic.
 He applies through the menu option in the app</p>
@@ -525,8 +519,6 @@ Upon completion, whenever his status is set to available, he gets push notificat
 <p>After he fixes he marks scooter as repaired in the app or brings to Bbali shop. Fix materials are provided by Bbali. When starting repair he selected estimated fix time.</p>
 
 <p>Once he returns it to Bbali shop and admin confirms as fixed, he gets 10 usd in the app in form of ether which he can convert to ride credits or transfer off the platform.</p>
-
-<hr>
 <h2 id='the-regular-business-man-user-who-goes-to-and-from-work-to-lunch'>The regular business man user who goes to and from work to lunch</h2>
 <p>A man who works for national tax service likes to do fun activities with his employees. He has the Bbali app and occasionally uses scooters to go to and from lunch or home.</p>
 
@@ -1517,7 +1509,7 @@ Each person downloads the app and scans the vehicles to ride after adding paymen
 <td>description of the charging facility</td>
 </tr>
 </tbody></table>
-<h3 id='change-charge-status'>Change Charge Status</h3>
+<h2 id='change-charger-status'>Change Charger Status</h2>
 <p>If user is approved by admin as a charger, then they can set their status to on or off (meaning they are available at the moment or not available regarding accepting vehicles to charge)</p>
 
 <blockquote>
