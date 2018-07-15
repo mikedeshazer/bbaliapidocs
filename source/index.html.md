@@ -23,7 +23,7 @@ This API will be written in Node.js with Mongo database.
 
 # User Stories
 
-### Bbali is a super-easy-to-use application for renting electric scooters.
+Bbali is a super-easy-to-use application for renting electric scooters.
 
 You can either
 
@@ -64,7 +64,7 @@ After checking it out, he receives a push notification with a link to a receipt 
 
 The next time he rides, he books a scooter for a whole day. However at the end, he his card can’t process the payment. He ends his ride and he is sent a push notification. After that he tries to reserve again but it asks him to confirm payment for his last trip or add a new payment option. The only thing originally charged came from the 10 dollar authorization that’s made each time a user checks in to a vehicle.
 
----------
+
 
 ## The couple that rents at the park at a Bbali popup shop
 
@@ -79,7 +79,7 @@ They are also informed they can do anytime and don’t need to return to shop if
 They are also advised to share with friends so they can get more credits for rides
 
 
------------
+
 
 ## The babysitter turned charger/delivery person
 
@@ -101,7 +101,7 @@ The ordering user goes to pickup the scooter and enters the pickup code from the
 
 Later, the pickup person, because their charger status is flipped on, gets a notication that a scooter needs to charged. She goes to pick it up, charges at her home and then returns it where she got it from or a shop. She gets 2 bucks for every vehicle she recharges. That she picks up, and 50 cents for ones that are delivered to her by riders to charge. Riders get a 1 buck discount when they drop off scooters that need a recharge (Under 15 percent battery life or less)
 
----------------
+
 
 
 ## The crypto enthusiast
@@ -114,7 +114,6 @@ He goes around referring friends to use his promo code. Each time after they com
 
  When he converts credits to crypto his conversion spread is 10 percent below market price because risk bbali takes due to possible refunds by friends and price volatility considerations.
 
-----------
 
 ## The techie turned Bbali mechanic
 
@@ -129,7 +128,6 @@ After he fixes he marks scooter as repaired in the app or brings to Bbali shop. 
 Once he returns it to Bbali shop and admin confirms as fixed, he gets 10 usd in the app in form of ether which he can convert to ride credits or transfer off the platform.
 
 
---------------
 
 
 ## The regular business man user who goes to and from work to lunch
@@ -936,7 +934,7 @@ description | optional| description of the charging facility
 
 
 
-### Change Charge Status
+## Change Charger Status
 
 If user is approved by admin as a charger, then they can set their status to on or off (meaning they are available at the moment or not available regarding accepting vehicles to charge)
 
