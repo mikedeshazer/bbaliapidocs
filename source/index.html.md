@@ -1028,7 +1028,7 @@ description | optional| description of the users capabilities
 
 
 
-### Change Mechanic Status
+## Change Mechanic Status
 
 If user is approved by admin as a charger, then they can set their status to on or off (meaning they are available at the moment or not available regarding accepting vehicles to charge)
 
@@ -1118,7 +1118,7 @@ description | optional| description of the users availability
 
 
 
-### Change Delivery Person Status
+## Change Delivery Person Status
 
 If user is approved by admin as a delivery person, then they can set their status to on or off (meaning they are available at the moment or not available regarding picking up and delivering vehicles to users). This endpoint is also used if they accept a request to pickup for somone
 
@@ -1161,7 +1161,7 @@ lon| optional | user's lon during update
 
 
 
-### See pending delivery requests
+## See pending delivery requests
 
 If user is approved by admin as a delivery person,they can see pending requests for people wanting a vehicle delivered to them
 
@@ -1224,7 +1224,7 @@ radius |optional | in kilometers the radius the user is open to going from their
 User's automatically get 5,000 KRW (or $5 depending if they are outside of Korea), when they sign up if that feature is on (controlled by admins). If a user recieved credit from admin, these credits are transferrable. If they received credits from signing up or from referral, these credits are not transferrable. If user uses a promo code when signing up, then they do not get the default signup credits if that feature is activated.
 
 
-### See available credits
+## See available credits
 
 API call allows a user to see how much in curency they have available in free ride credits
 
@@ -1265,7 +1265,7 @@ User's automatically get 5,000 KRW (or $5 depending if they are outside of Korea
 
 
 
-### SendCredits
+## Send Credits
 
 API call allows a user to send credits that they received from an admin. Also sends a push notification and email to recieving user. If email is not a user, it still sends email with a promo code the user can unlock the credits with when they sign up
 
@@ -1312,7 +1312,7 @@ lon| optional | user's lon when making request
 
 
 
-### Create Referral Code
+## Create Referral Code
 
 Code is created for each user when they first click the refer your friends button in the application
 
@@ -1352,7 +1352,7 @@ lon| optional | user's lon when making request
 
 
 
-### Use Promo Code
+## Use Promo Code
 
 API call allows a user, after signing up, to add a referral code to their account
 
@@ -1397,7 +1397,7 @@ lon| optional | user's lon when making request
 
 
 
-### Add Payment Method
+## Add Payment Method
 
 API call that creates a payment method for a user
 
@@ -1446,7 +1446,7 @@ lon| optional | user's lon when making request
 
 
 
-### Update Payment Method
+## Update Payment Method
 
 API call allows user to update credit card information ,remove payment method, or set as default
 
@@ -1494,7 +1494,7 @@ lon| optional | user's lon when making request
 
 
 
-### Authorize Payment Method
+## Authorize Payment Method
 
 API call is made when user is booking a ride and authorizes the default or selected payment method for  10,000KRW (or $9 if outside Korea). If this fails, user is asked to try another payment method.
 
@@ -1533,7 +1533,7 @@ lon| optional | user's lon when making request
 
 
 
-### Send Cryptocurrency
+## Send Cryptocurrency
 
 API call allows a user to send bicoin or ether from their account to another user or cryptocurrency address
 
@@ -1576,7 +1576,7 @@ type | required  | either bitcoin or ether
 
 
 
-### Convert Credits/Crypto
+## Convert Credits/Crypto
 
 API call allows a user to convert bitcoin/ether into ride credits or ride credits into bitcoin or ether
 
@@ -1624,7 +1624,7 @@ amount | required | how much of the base currency they are converting
 
 
 
-### Make Admin
+## Make Admin
 When first user creates an account on the application that user is set as admin and can give admin permissions to future users
 
 API call allows one user to make another user an admin if they are an admin
@@ -1665,7 +1665,7 @@ toUsersPhone | required, if no email | phone of user being made admin if no phon
 
 
 
-### Send Credit
+## Send Credit
 
 API call allows admins to send credits to users. Admins do not need credits in their accounts to send credits. Max credit a admin can send to one user is equivalent to $100 USD.
 
@@ -1706,7 +1706,7 @@ currency| required| defaults to KRW
 
 
 
-### Search nearby users
+## Search nearby users
 
 API call allows admins to see all users nearby within a certain radius
 
@@ -1766,7 +1766,7 @@ API call allows admins to see all users nearby within a certain radius
 
 
 
-### HTTP Request
+## HTTP Request
 
 `GET http://api.bbali.com/admin/searchNearby`
 
@@ -1787,7 +1787,7 @@ radius | optional| if admin is setting a radius for geofence for their query, de
 
 
 
-### Update User
+## Update User
 
 API call allows admins to see update user using their email or phone as the query. Admin can also take away another admin's privelges if their user account became an admin before the editted query.
 
@@ -1833,7 +1833,7 @@ status| optional | If admin is making user a active or suspended
 
 
 
-### Create Vehicle
+## Create Vehicle
 
 API call allows an admin to create a vehicle
 
@@ -1871,6 +1871,10 @@ originalLon | required | original longitude of the vehicle
 type | required | adultscooter, kidscooter, moped, car.
 unlockSeed | optional | The unlock seed of the vehicle so the server can stay synced in order to unlock and have the right timed unlock code
 description| optional | Description of the vehicle
+make| optional | manufacturer
+model| optional | model of vehicle
+year| optional | year vehicle was released
+serialNum| optional | serial num/license plate of vehicle if applicable
 
 
 
@@ -1879,7 +1883,7 @@ description| optional | Description of the vehicle
 
 
 
-### Update Vehicle
+## Update Vehicle
 
 API call allows an admin to edit a vehicle's information
 
@@ -1930,7 +1934,7 @@ status| optional | available, riding, charging, locked, unavailable, broken
 
 
 
-### View Special User Applications
+## View Special User Applications
 
 API call allows admins to see applications for chargers, mechanics and delivery people
 
