@@ -7,6 +7,10 @@
 
 -----
 
+### User stories of how people will use the app: [https://docs.bbali.io/#user-stories](https://docs.bbali.io/#user-stories)
+
+-----
+
 
 Original concept screenshots of the application to give context to how the API is being consumed:
 
