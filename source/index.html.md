@@ -185,7 +185,7 @@ This endpoint retrieves all vehicles nearby.
 
 ### HTTP Request
 
-`GET http://api.bbalio.io/vehicles/nearby`
+`GET https://api.bbali.io/vehicles/nearby`
 
 ### Query Parameters
 
@@ -227,7 +227,7 @@ This endpoint allows a user to rent a vehicle
 
 ### HTTP Request
 
-`POST http://api.bbalio.io/vehicles/rent`
+`POST https://api.bbali.io/vehicles/rent`
 
 ### Query Parameters
 
@@ -272,7 +272,7 @@ This endpoint allows a user send information about an issue with a vehicle, such
 
 ### HTTP Request
 
-`POST http://api.bbalio.io/vehicles/report`
+`POST https://api.bbali.io/vehicles/report`
 
 ### Query Parameters
 
@@ -316,7 +316,7 @@ This endpoint allows a a user to complete their ride by that vehicles unique nam
 
 ### HTTP Request
 
-`POST http://api.bbalio.io/vehicles/checkout`
+`POST https://api.bbali.io/vehicles/checkout`
 
 ### Query Parameters
 
@@ -356,7 +356,7 @@ This endpoint allows a a user to lock the vehicle and the vehicle is still not r
 
 ### HTTP Request
 
-`POST http://api.bbalio.io/vehicles/lock`
+`POST https://api.bbali.io/vehicles/lock`
 
 ### Query Parameters
 
@@ -414,7 +414,7 @@ This endpoint creates a user and returns their unique identifier for future call
 
 ### HTTP Request
 
-`POST http://api.bbalio.io/users/create`
+`POST https://api.bbali.io/users/create`
 
 ### Query Parameters
 
@@ -459,7 +459,7 @@ This endpoint logs in a user
 
 ### HTTP Request
 
-`POST http://api.bbalio.io/users/session`
+`POST https://api.bbali.io/users/session`
 
 ### Query Parameters
 
@@ -504,7 +504,7 @@ This endpoint allows user to edit their information in the settings screen
 
 ### HTTP Request
 
-`PUT http://api.bbalio.io/users/edit`
+`PUT https://api.bbali.io/users/edit`
 
 ### Query Parameters
 
@@ -549,7 +549,7 @@ This endpoint accepts an email address and sends a reset link to the user if the
 
 ### HTTP Request
 
-`POST http://api.bbalio.io/users/forgotPassword`
+`POST https://api.bbali.io/users/forgotPassword`
 
 ### Query Parameters
 
@@ -583,7 +583,7 @@ This endpoint receives a new user password and the token created by the forgot p
 
 ### HTTP Request
 
-`PUT http://api.bbalio.io/users/resetPassword`
+`PUT https://api.bbali.io/users/resetPassword`
 
 ### Query Parameters
 
@@ -620,7 +620,7 @@ This endpoint allows user to deactivate account. They can still login and change
 
 ### HTTP Request
 
-`POST http://api.bbalio.io/users/deactivate`
+`POST https://api.bbali.io/users/deactivate`
 
 ### Query Parameters
 
@@ -670,7 +670,7 @@ After a vehicle is rented, immediately a create ride is called
 
 ### HTTP Request
 
-`POST http://api.bbalio.io/rides/start`
+`POST https://api.bbali.io/rides/start`
 
 ### Query Parameters
 
@@ -705,7 +705,7 @@ After a vehicle is checkedout, immediately a end ride is called, as a double con
 
 ### HTTP Request
 
-`POST http://api.bbalio.io/rides/end`
+`POST https://api.bbali.io/rides/end`
 
 ### Query Parameters
 
@@ -780,7 +780,7 @@ This endpoint allows user to view
 
 ### HTTP Request
 
-`GET http://api.bbalio.io/rides/`
+`GET https://api.bbali.io/rides/`
 
 ### Query Parameters
 
@@ -816,7 +816,7 @@ This endpoint allows user to view
 
 ### HTTP Request
 
-`POST http://api.bbalio.io/rides/review`
+`POST https://api.bbali.io/rides/review`
 
 ### Query Parameters
 
@@ -867,7 +867,7 @@ Only can be created by development/operations team and not admins, either automa
 
 ### HTTP Request
 
-`POST http://api.bbalio.io/notification/send`
+`POST https://api.bbali.io/notification/send`
 
 ### Query Parameters
 
@@ -915,7 +915,7 @@ API call allows a user to apply to become a charger at their location.
 
 ### HTTP Request
 
-`POST http://api.bbalio.io/chargers/apply`
+`POST https://api.bbali.io/chargers/apply`
 
 ### Query Parameters
 
@@ -960,7 +960,7 @@ If user is approved by admin as a charger, then they can set their status to on 
 
 ### HTTP Request
 
-`PUT http://api.bbalio.io/chargers/status`
+`PUT https://api.bbali.io/chargers/status`
 
 ### Query Parameters
 
@@ -1007,7 +1007,7 @@ API call allows a user to apply to become a charger at their location. Users don
 
 ### HTTP Request
 
-`POST http://api.bbalio.io/chargers/apply`
+`POST https://api.bbali.io/chargers/apply`
 
 ### Query Parameters
 
@@ -1052,7 +1052,7 @@ If user is approved by admin as a charger, then they can set their status to on 
 
 ### HTTP Request
 
-`PUT http://api.bbalio.io/chargers/status`
+`PUT https://api.bbali.io/chargers/status`
 
 ### Query Parameters
 
@@ -1097,7 +1097,7 @@ API call allows a user to apply to become a delivery person for review by admins
 
 ### HTTP Request
 
-`POST http://api.bbalio.io/delivery/apply`
+`POST https://api.bbali.io/delivery/apply`
 
 ### Query Parameters
 
@@ -1141,7 +1141,7 @@ If user is approved by admin as a delivery person, then they can set their statu
 
 ### HTTP Request
 
-`PUT http://api.bbalio.io/delivery/status`
+`PUT https://api.bbali.io/delivery/status`
 
 ### Query Parameters
 
@@ -1202,7 +1202,7 @@ If user is approved by admin as a delivery person,they can see pending requests 
 
 ### HTTP Request
 
-`GET http://api.bbalio.io/delivery/opportunities`
+`GET https://api.bbali.io/delivery/opportunities`
 
 ### Query Parameters
 
@@ -1248,7 +1248,7 @@ API call allows a user to see how much in curency they have available in free ri
 
 ### HTTP Request
 
-`GET http://api.bbalio.io/credits/`
+`GET https://api.bbali.io/credits/`
 
 ### Query Parameters
 
@@ -1290,7 +1290,7 @@ API call allows a user to send credits that they received from an admin. Also se
 
 ### HTTP Request
 
-`POST http://api.bbalio.io/credits/send`
+`POST https://api.bbali.io/credits/send`
 
 ### Query Parameters
 
@@ -1336,7 +1336,7 @@ Code is created for each user when they first click the refer your friends butto
 
 ### HTTP Request
 
-`GET http://api.bbalio.io/referral/`
+`GET https://api.bbali.io/referral/`
 
 ### Query Parameters
 
@@ -1376,7 +1376,7 @@ API call allows a user, after signing up, to add a referral code to their accoun
 
 ### HTTP Request
 
-`POST http://api.bbalio.io/referral/usecode`
+`POST https://api.bbali.io/referral/usecode`
 
 ### Query Parameters
 
@@ -1420,7 +1420,7 @@ API call that creates a payment method for a user
 
 ### HTTP Request
 
-`POST http://api.bbalio.io/paymentMethod/`
+`POST https://api.bbali.io/paymentMethod/`
 
 ### Query Parameters
 
@@ -1469,7 +1469,7 @@ API call allows user to update credit card information ,remove payment method, o
 
 ### HTTP Request
 
-`PUT http://api.bbalio.io/paymentMethod/`
+`PUT https://api.bbali.io/paymentMethod/`
 
 ### Query Parameters
 
@@ -1517,7 +1517,7 @@ API call is made when user is booking a ride and authorizes the default or selec
 
 ### HTTP Request
 
-`POST http://api.bbalio.io/paymentMethod/authorize`
+`POST https://api.bbali.io/paymentMethod/authorize`
 
 ### Query Parameters
 
@@ -1558,7 +1558,7 @@ API call allows a user to send bicoin or ether from their account to another use
 
 ### HTTP Request
 
-`POST http://api.bbalio.io/payments/sendCrypto`
+`POST https://api.bbali.io/payments/sendCrypto`
 
 ### Query Parameters
 
@@ -1602,7 +1602,7 @@ API call allows a user to convert bitcoin/ether into ride credits or ride credit
 
 ### HTTP Request
 
-`POST http://api.bbalio.io/payments/convertCrypto`
+`POST https://api.bbali.io/payments/convertCrypto`
 
 ### Query Parameters
 
@@ -1648,7 +1648,7 @@ API call allows one user to make another user an admin if they are an admin
 
 ### HTTP Request
 
-`POST http://api.bbalio.io/admin/makeAdmin`
+`POST https://api.bbali.io/admin/makeAdmin`
 
 ### Query Parameters
 
@@ -1688,7 +1688,7 @@ API call allows admins to send credits to users. Admins do not need credits in t
 
 ### HTTP Request
 
-`POST http://api.bbalio.io/admin/sendCredits`
+`POST https://api.bbali.io/admin/sendCredits`
 
 ### Query Parameters
 
@@ -1766,7 +1766,7 @@ API call allows admins to see all users nearby within a certain radius
 
 ## HTTP Request
 
-`GET http://api.bbalio.io/admin/searchNearby`
+`GET https://api.bbali.io/admin/searchNearby`
 
 ### Query Parameters
 
@@ -1810,7 +1810,7 @@ API call allows admins to see update user using their email or phone as the quer
 
 ### HTTP Request
 
-`PUT http://api.bbalio.io/admin/updateUser`
+`PUT https://api.bbali.io/admin/updateUser`
 
 ### Query Parameters
 
@@ -1856,7 +1856,7 @@ API call allows an admin to create a vehicle
 
 ### HTTP Request
 
-`POST http://api.bbalio.io/admin/createVehicle`
+`POST https://api.bbali.io/admin/createVehicle`
 
 ### Query Parameters
 
@@ -1906,7 +1906,7 @@ API call allows an admin to edit a vehicle's information
 
 ### HTTP Request
 
-`PUT http://api.bbalio.io/admin/editVehicle`
+`PUT https://api.bbali.io/admin/editVehicle`
 
 ### Query Parameters
 
@@ -1978,7 +1978,7 @@ API call allows admins to see applications for chargers, mechanics and delivery 
 ### HTTP Request
 
 
-`POST http://api.bbalio.io/admin/viewApplications`
+`POST https://api.bbali.io/admin/viewApplications`
 
 
 ### Query Parameters
