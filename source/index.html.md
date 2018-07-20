@@ -217,7 +217,8 @@ This endpoint allows a user to rent a vehicle
         "name": "463D3",
         "type": "adult-scooter",
         "charge": .5,
-        "status": "available"
+        "status": "available",
+        "unlockCode":"2387"
       }
    
 }
@@ -660,7 +661,8 @@ After a vehicle is rented, immediately a create ride is called
      {
       "rideId":"34778438743",
       "timstamp": "2017-03-12 07:15:20 GMT",
-      "vehicleName":"55423JU"
+      "vehicleName":"55423JU",
+      "unlockCode":"1375"
     }
    
 }
